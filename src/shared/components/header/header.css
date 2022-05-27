@@ -1,0 +1,28 @@
+.header {
+    box-shadow: 5px 5px 5px #d7d7d7;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    width: 20%;
+}
+
+.header__menu__control > i {
+    margin: 0px 10px;
+}
+
+.header__menu__account > p {
+    display: inline-block;
+}
+
+.header__menu__account > i {
+    margin-left: 20px;
+}
