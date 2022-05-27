@@ -3,6 +3,7 @@ import Item from './sidebar-item';
 import './sidebar.css';
 
 const tabs = [
+    {id: 0, title: 'Trang chủ', icon: 'fa fa-home'},
     {id: 1, title: 'A', icon: 'fa fa-home'},
     {id: 2, title: 'B', icon: 'fa fa-bell', subItem: [{id: 1, title: 'sub-A', icon: 'fa fa-home'}]},
     {id: 3, title: 'C', icon: 'fa fa-home'},
@@ -17,39 +18,45 @@ const tabs = [
     {id: 12, title: 'E', icon: 'fa fa-home'},
 ]
 
-const Sidebar = () => {
+const Sidebar = ({expand = true, expandHandle}) => {
     const [selectTab, setSelectedTab] = useState(0);
 
     const changeTabHandle = (id) => setSelectedTab(id);
 
+    const expandClickHandle = () => {
+        if (!expand) expandHandle();
+    };
+
     return (
-        <div className="sidebar">
+        <div className={`sidebar ${expand ? 'expand' : 'shrink'}`} onClick={expandClickHandle}>
             <div className='title'>
                 <h2>BĐS</h2>
             </div>
             <div className='account-info'>
                 <i className="fa fa-user-circle account-info__avatar" />
                 <div className='info'>
-                    <div className='upper__info'>
-                        <p>Nguyễn Văn A</p>
-                    </div>
-                    <div className='below__info'>
-                        <div>
-                            <i className="fa fa-circle status--active" />
-                            <span>Online</span>
+                    {
+                        expand &&
+                        <div className='upper__info'>
+                            <p>Nguyễn Văn A</p>
                         </div>
-                        <div>
-                            <i className="fa fa-bell notification" />
-                            <span>Thông báo</span>
+                    }
+                    {
+                        expand &&
+                        <div className='below__info'>
+                            <div>
+                                <i className="fa fa-circle status--active" />
+                                <span>Online</span>
+                            </div>
+                            <div>
+                                <i className="fa fa-bell notification" />
+                                <span>Thông báo</span>
+                            </div>
                         </div>
-                    </div>
+                    }
                 </div>
             </div>
             <div className='options'>
-                <div className={`option ${selectTab === 0 ? 'selected' : 'unselected'}`}>
-                    <i className='fa fa-home' />
-                    <p>Trang chủ</p>
-                </div>
                 {
                     tabs.map(tab => (
                         <Item
@@ -60,6 +67,7 @@ const Sidebar = () => {
                             subItem={tab.subItem}
                             onClick={(id) => changeTabHandle(id)}
                             selected={selectTab === tab.id}
+                            expand={expand}
                         />
                     ))
                 }

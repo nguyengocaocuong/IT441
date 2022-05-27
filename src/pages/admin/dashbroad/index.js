@@ -1,14 +1,17 @@
+import { useState } from "react";
 import Content from "../../../shared/components/content";
-import Header from "../../../shared/components/header";
 import Sidebar from "../../../shared/components/sidebar";
 import './dashbroad.css';
 
 const Dashbroad = () => {
+    const [showSidebar, setShowSidebar] = useState(false);
+
+    const showSidebarHandle = () => setShowSidebar(showSidebar => !showSidebar);
+
     return (
         <div className="dashbroad">
-            <Sidebar />
-            {/* <Header /> */}
-            <Content />
+            <Sidebar expand={showSidebar} expandHandle={showSidebarHandle} />
+            <Content expandHandle={showSidebarHandle} />
         </div>
     )
 }

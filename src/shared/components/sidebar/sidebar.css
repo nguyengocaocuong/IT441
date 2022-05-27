@@ -5,6 +5,10 @@
     color: #ffffff;
 }
 
+.shrink {
+    width: 5%;
+}
+
 .title {
     text-align: center;
     padding: 15px;
@@ -19,11 +23,11 @@
 .account-info {
     padding: 0px 15px 15px 15px;
     display: flex;
-    align-items: center;
 }
 
 .account-info__avatar {
     font-size: 50px;
+    margin-top: 18px;
 }
 
 .status--active {

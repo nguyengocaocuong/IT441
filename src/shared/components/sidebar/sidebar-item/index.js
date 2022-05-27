@@ -8,7 +8,8 @@ const Item = ({
     icon,
     selected = false,
     subItem= [],
-    onClick
+    onClick,
+    expand = false
 }) => {
     const [showDropdown, setShowDropdown] = useState(false);
 
@@ -27,11 +28,11 @@ const Item = ({
         <div style={{position: 'relative'}}>
             <div className={`option ${selected ? 'selected' : 'unselected'}`} onClick={clickHanle} >
                 <i className={icon} />
-                <p>{title}</p>
-                {subItem.length > 0 && <i className={`fa ${showDropdown ? 'fa-chevron-down' : 'fa-chevron-left'} drop-down-btn`}/>}
+                {expand  && <p>{title}</p>}
+                {expand && subItem.length > 0 && <i className={`fa ${showDropdown ? 'fa-chevron-down' : 'fa-chevron-left'} drop-down-btn`}/>}
             </div>
             {
-                selected && subItem.length > 0 && showDropdown &&
+                expand && selected && subItem.length > 0 && showDropdown &&
                 <div className='drop-down-menu'>
                 {
                     subItem.map(item => (

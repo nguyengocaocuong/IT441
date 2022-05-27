@@ -1,10 +1,10 @@
 import Header from "../header";
 import './content.css';
 
-const Content = () => {
+const Content = ({expandHandle}) => {
     return (
         <div className="content">
-            <Header />
+            <Header menuClickHandle={expandHandle}/>
         </div>
     )
 }
