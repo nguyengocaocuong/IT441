@@ -22,6 +22,7 @@
 
 .detail__category {
     margin: 8px 0px;
+    border-bottom: 1px solid #a3a3a3;
 }
 
 .detail__info__control {

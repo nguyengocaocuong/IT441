@@ -1,0 +1,73 @@
+.view__detail {
+    background-color: #ffffff;
+    width: 700px;
+    margin: auto;
+    margin-top: 100px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.detail__image {
+    width: 250px;
+    border: 1px solid #a3a3a3;
+}
+
+.detail__info {
+    padding: 10px;
+    padding-right: 40px;
+    width: 100%;
+}
+
+.detail__category {
+    margin: 8px 0px;
+}
+
+.detail__category > span {
+    display: inline-block;
+    width: 150px;
+}
+
+.detail__category > input {
+    width: 200px;
+}
+
+.detail__info__control {
+    width: 100%;
+    text-align: right;
+}
+
+.detail__info__control > button,
+.detail__info__control > input {
+    width: 150px;
+    height: 40px;
+    outline: none;
+    font-size: 15px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.detail__info__control > input {
+    background-color: #79b900;
+}
+
+.detail__info__control > button {
+    background-color: #ff5555;
+}
+
+.delete-btn {
+    margin-right: 10px;
+}
+
+.cancelBtn {
+    background-color: #ff5555 !important;
+}
+
+.edit-title {
+    margin-left: 150px;
+}

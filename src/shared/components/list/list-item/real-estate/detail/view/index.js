@@ -1,7 +1,8 @@
 import './view.css';
 import house from '../../../../../images/house.png';
 
-const View = ({item}) => {
+export const View = ({item, onEdit}) => {
+    const directions = ['Đông', 'Tây', 'Nam', 'Bắc', 'Đông Nam', 'Đông Bắc', 'Tây Nam', 'Tây Bắc'];
     return (
         <div className='view__detail'>
             <div>
@@ -25,7 +26,7 @@ const View = ({item}) => {
                 </div>
                 <div className='detail__category'>
                     <span>Hướng nhà: </span>
-                    <span>{item.direction}</span>
+                    <span>{directions[item.direction]}</span>
                 </div>
                 <div className='detail__category'>
                     <span>Số tầng: </span>
@@ -42,11 +43,9 @@ const View = ({item}) => {
 
                 <div className='detail__info__control'>
                     <button><i className="fa fa-trash delete-btn" />Xóa</button>
-                    <input type='submit' value='Chỉnh sửa'/>
+                    <input type='submit' value='Chỉnh sửa' onClick={() => onEdit()} />
                 </div>
             </div>
         </div>
     );
 }
-
-export default View;
