@@ -1,6 +1,7 @@
 import './main-content.css';
 import List from '../../list';
 import RealEstate from '../../list/list-item/real-estate';
+import User from '../../list/list-item/user';
 import Filter from '../../filter';
 
 const items = [
@@ -16,11 +17,20 @@ const items = [
     {id: 10, title: 'Nhà J', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 0, floors: 3, owner: 'Trần Thị B', phone: '06798132'}
 ];
 
+const users = [
+    {id: 1, name: 'Nguyễn Văn A', phone: '098765432', dob: '1/1/1990', image: ''},
+    {id: 2, name: 'Nguyễn Văn A', phone: '098765432', dob: '1/1/1990', image: ''},
+    {id: 3, name: 'Nguyễn Văn A', phone: '098765432', dob: '1/1/1990', image: ''},
+    {id: 4, name: 'Nguyễn Văn A', phone: '098765432', dob: '1/1/1990', image: ''},
+    {id: 5, name: 'Nguyễn Văn A', phone: '098765432', dob: '1/1/1990', image: ''},
+];
+
 const MainContent = () => {
     return (
         <div className='main-content'>
             <Filter />
-            <List items={items} component={RealEstate}/>
+            {/* <List items={items} component={RealEstate}/> */}
+            <List items={users} component={User}/>
         </div>
     )
 }
