@@ -1,3 +1,5 @@
+import './sub-item.css';
+
 const SubItem = ({id, title, icon, selected=false}) => {
     return (
         <div className="sub-item">

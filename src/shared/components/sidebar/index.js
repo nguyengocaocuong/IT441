@@ -30,7 +30,8 @@ const Sidebar = ({expand = true, expandHandle}) => {
     return (
         <div className={`sidebar ${expand ? 'expand' : 'shrink'}`} onClick={expandClickHandle}>
             <div className='title'>
-                <h2>BĐS</h2>
+                <i class="fa fa-home" />
+                {expand && <h2>BĐS</h2>}
             </div>
             <div className='account-info'>
                 <i className="fa fa-user-circle account-info__avatar" />
