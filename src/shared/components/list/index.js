@@ -1,18 +1,33 @@
 import { Modal } from '@material-ui/core';
 import { useState } from 'react';
-import View from './list-item/real-estate/detail/view';
+import {View as RealEstateView} from './list-item/real-estate/detail/view';
+import {Edit as RealEstateEdit} from './list-item/real-estate/detail/edit';
 import './list.css';
 
 const List = ({items, component}) => {
     const PropComponent = component;
 
-    const [detailInfo, setDetailInfo] = useState({open: false})
+    const [detailInfo, setDetailInfo] = useState({open: false});
+    const [edit, setEdit] = useState(false);
 
     const onOpenHandle = item => {
         setDetailInfo({...item, open: true});
     }
 
-    const onCloseHandle = () => setDetailInfo({open: false});
+    const onCloseHandle = () => {
+        setDetailInfo({open: false})
+        setEdit(false);
+    };
+
+    const editHandle = () => setEdit(true);
+    const cancelEditHandle = () => setEdit(false);
+
+    const getDetailContent = () => {
+        if (edit)
+            return <RealEstateEdit item={detailInfo} onCancel={cancelEditHandle} />
+        else
+            return <RealEstateView item={detailInfo} onEdit={editHandle} />
+    }
 
     return (
         <div className='list-container'>
@@ -28,8 +43,8 @@ const List = ({items, component}) => {
                 open={detailInfo.open}
                 onClose={onCloseHandle}
             >
-                <div style={{outline: 'none'}}>
-                    <View item={detailInfo} />
+                <div className='paper'>
+                    {getDetailContent()}
                 </div>
             </Modal>
         </div>

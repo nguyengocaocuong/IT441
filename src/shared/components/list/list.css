@@ -13,3 +13,9 @@
 .result--number {
     margin-left: 30px;
 }
+
+.paper {
+    width: 650px;
+    margin: auto;
+    outline: none;
+}
