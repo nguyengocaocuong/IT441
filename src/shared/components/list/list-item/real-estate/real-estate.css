@@ -4,9 +4,35 @@
     width: 45%;
     height: 200px;
     display: flex;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: box-shadow 250ms, border 250ms, background-color 250ms;
+}
+
+.real-estate:hover {
+    box-shadow: -5px 5px 5px #d3d3d3;
+    border: 1px solid #bdbdbd;
+    background-color: #f0f0f0;
 }
 
 .image {
     width: 200px;
     height: 200px;
+    min-width: 200px;
+}
+
+.real-estate__info {
+    padding: 10px;
+    width: 100%;
+}
+
+.info__category {
+    margin-top: 2px;
+    border-bottom: 1px solid #a7a7a7;
+    padding: 2px 5px;
+    width: 100%;
+}
+
+.phone-number {
+    color: #ff0000;
 }
