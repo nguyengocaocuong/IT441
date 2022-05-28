@@ -41,7 +41,7 @@ const View = ({item}) => {
                 </div>
 
                 <div className='detail__info__control'>
-                    <button><i class="fa fa-trash delete-btn" />Xóa</button>
+                    <button><i className="fa fa-trash delete-btn" />Xóa</button>
                     <input type='submit' value='Chỉnh sửa'/>
                 </div>
             </div>

@@ -1,0 +1,27 @@
+.user {
+    width: 45%;
+    border: 1px solid #a3a3a3;
+    padding: 10px;
+    margin: 10px 0px;
+    display: flex;
+    cursor: pointer;
+    transition: box-shadow 250ms, border 250ms, background-color 250ms;
+}
+
+.user:hover {
+    box-shadow: -5px 5px 5px #d3d3d3;
+    border: 1px solid #bdbdbd;
+    background-color: #f0f0f0;
+}
+
+.user-avatar {
+    width: 150px;
+}
+
+.user-info {
+    padding: 10px;
+}
+
+.user-info__category {
+    margin: 5px 0px;
+}
