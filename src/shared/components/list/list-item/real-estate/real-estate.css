@@ -1,0 +1,12 @@
+.real-estate {
+    border: 1px solid #d3d3d3;
+    margin: 10px 0px;
+    width: 45%;
+    height: 200px;
+    display: flex;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}
