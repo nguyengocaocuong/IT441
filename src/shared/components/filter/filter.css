@@ -1,0 +1,34 @@
+.filter {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    padding: 0px 40px;
+    box-sizing: border-box;
+}
+
+.filter > input {
+    padding: 5px;
+}
+
+.filter > input[type='text'] {
+    width: 100%;
+}
+
+.filter > input[type='submit'] {
+    width: 150px;
+    border: none;
+    background-color: #006eff;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: medium;
+    cursor: pointer;
+    transition: background-color 250ms;
+}
+
+.filter > input[type='submit']:hover {
+    background-color: #0053be;
+}
+
+.filter > input[type='text']:focus {
+    outline: none;
+}

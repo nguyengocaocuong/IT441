@@ -1,6 +1,7 @@
 import './main-content.css';
 import List from '../../list';
 import RealEstate from '../../list/list-item/real-estate';
+import Filter from '../../filter';
 
 const items = [
     {id: 1, title: 'Nhà A', image: ''},
@@ -18,6 +19,7 @@ const items = [
 const MainContent = () => {
     return (
         <div className='main-content'>
+            <Filter />
             <List items={items} component={RealEstate}/>
         </div>
     )
