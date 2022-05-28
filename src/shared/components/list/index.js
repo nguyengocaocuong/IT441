@@ -2,6 +2,8 @@ import { Modal } from '@material-ui/core';
 import { useState } from 'react';
 import {View as RealEstateView} from './list-item/real-estate/detail/view';
 import {Edit as RealEstateEdit} from './list-item/real-estate/detail/edit';
+import {View as UserView} from './list-item/user/detail/view';
+import {Edit as UserEdit} from './list-item/user/detail/edit';
 import './list.css';
 
 const List = ({items, component}) => {
@@ -24,9 +26,9 @@ const List = ({items, component}) => {
 
     const getDetailContent = () => {
         if (edit)
-            return <RealEstateEdit item={detailInfo} onCancel={cancelEditHandle} />
+            return <UserEdit item={detailInfo} onCancel={cancelEditHandle} />
         else
-            return <RealEstateView item={detailInfo} onEdit={editHandle} />
+            return <UserView item={detailInfo} onEdit={editHandle} />
     }
 
     return (

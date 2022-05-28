@@ -2,8 +2,10 @@ import './user.css';
 import defaultAvatar from '../../../images/default-avatar.png';
 
 const User = (props) => {
+    const onClickHandle = () => props.onClick(props);
+    
     return (
-        <div className='user'>
+        <div className='user' onClick={onClickHandle}>
             <div>
                 <img className='user-avatar' alt='user' src={defaultAvatar} />
             </div>

@@ -29,8 +29,8 @@ const MainContent = () => {
     return (
         <div className='main-content'>
             <Filter />
-            <List items={items} component={RealEstate}/>
-            {/* <List items={users} component={User}/> */}
+            {/* <List items={items} component={RealEstate}/> */}
+            <List items={users} component={User}/>
         </div>
     )
 }
