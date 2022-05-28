@@ -43,6 +43,7 @@
     transition: background-color 250ms, color 250ms;
 }
 
+.show--dropdown,
 .role-title:hover {
     background-color: #000000;
     color: #ffffff;
