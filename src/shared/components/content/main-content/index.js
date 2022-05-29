@@ -42,7 +42,7 @@ const MainContent = ({contentId=0}) => {
                 return (
                     <>
                         <Filter />
-                        <List items={users} component={User} />
+                        <List items={users} component={User} user />
                     </>
                 );
 

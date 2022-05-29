@@ -6,7 +6,7 @@ import {View as UserView} from './list-item/user/detail/view';
 import {Edit as UserEdit} from './list-item/user/detail/edit';
 import './list.css';
 
-const List = ({items, component}) => {
+const List = ({items, component, user=false}) => {
     const PropComponent = component;
 
     const [detailInfo, setDetailInfo] = useState({open: false});
@@ -25,10 +25,17 @@ const List = ({items, component}) => {
     const cancelEditHandle = () => setEdit(false);
 
     const getDetailContent = () => {
-        if (edit)
-            return <UserEdit item={detailInfo} onCancel={cancelEditHandle} />
-        else
-            return <UserView item={detailInfo} onEdit={editHandle} />
+        if (user) {
+            if (edit)
+                return <UserEdit item={detailInfo} onCancel={cancelEditHandle} />
+            else
+                return <UserView item={detailInfo} onEdit={editHandle} />
+        } else {
+            if (edit)
+                return <RealEstateEdit item={detailInfo} onCancel={cancelEditHandle} />
+            else
+                return <RealEstateView item={detailInfo} onEdit={editHandle} />
+        }
     }
 
     return (
