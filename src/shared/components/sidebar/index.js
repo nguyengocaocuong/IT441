@@ -17,6 +17,11 @@ const tabs = [
         id: 2,
         title: 'Chấm công',
         icon: 'fa fa-briefcase',
+    },
+    {
+        id: 3,
+        title: 'Đăng bài',
+        icon: 'fa fa-plus'
     }
 ]
 

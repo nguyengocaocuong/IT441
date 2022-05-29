@@ -4,6 +4,7 @@ import RealEstate from '../../list/list-item/real-estate';
 import User from '../../list/list-item/user';
 import Filter from '../../filter';
 import CheckInOut from '../../../../pages/employee/checkin-out';
+import Post from '../../../../pages/employee/post';
 
 const items = [
     {id: 1, title: 'Nhà A', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 3, floors: 3, owner: 'Trần Thị B', phone: '06798132'},
@@ -43,14 +44,19 @@ const MainContent = ({contentId=0}) => {
                         <Filter />
                         <List items={users} component={User} />
                     </>
-                )
+                );
 
             case 2:
                 return (
                     <>
                         <CheckInOut />
                     </>
-                )
+                );
+
+            case 3:
+                return (
+                    <Post />
+                );
 
             default: return null;
         }

@@ -1,0 +1,47 @@
+.post {
+    height: 580px;
+    overflow: auto;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.post__catogory {
+    width: 100%;
+}
+
+.post__title {
+    width: 80%;
+}
+
+.post__catogory span {
+    display: inline-block;
+    width: 120px;
+}
+
+.description {
+    display: flex;
+    align-items: flex-start;
+}
+
+.owner__info,
+.real__estate__info {
+    margin: 10px 0px;
+}
+
+.post__action {
+    width: 100px;
+    height: 40px;
+    margin: 0px 5px;
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+}
+
+.cancel {
+    background-color: #ff6d6d;
+}
+
+.publish {
+    background-color: #1eb600;
+}
