@@ -3,25 +3,30 @@ import Item from './sidebar-item';
 import './sidebar.css';
 
 const tabs = [
-    {id: 0, title: 'Trang chủ', icon: 'fa fa-home'},
-    {id: 1, title: 'A', icon: 'fa fa-home'},
-    {id: 2, title: 'B', icon: 'fa fa-bell', subItem: [{id: 1, title: 'sub-A', icon: 'fa fa-home'}]},
-    {id: 3, title: 'C', icon: 'fa fa-home'},
-    {id: 4, title: 'D', icon: 'fa fa-home'},
-    {id: 5, title: 'E', icon: 'fa fa-home'},
-    {id: 6, title: 'E', icon: 'fa fa-home'},
-    {id: 7, title: 'E', icon: 'fa fa-home'},
-    {id: 8, title: 'E', icon: 'fa fa-home'},
-    {id: 9, title: 'E', icon: 'fa fa-home'},
-    {id: 10, title: 'E', icon: 'fa fa-home'},
-    {id: 11, title: 'E', icon: 'fa fa-home'},
-    {id: 12, title: 'E', icon: 'fa fa-home'},
+    {
+        id: 0,
+        title: 'Thống kê bất động sản',
+        icon: 'fa fa-list',
+    },
+    {
+        id: 1,
+        title: 'Thống kê nhân viên',
+        icon: 'fa fa-users',
+    },
+    {
+        id: 2,
+        title: 'Chấm công',
+        icon: 'fa fa-briefcase',
+    }
 ]
 
-const Sidebar = ({expand = true, expandHandle}) => {
+const Sidebar = ({expand = true, expandHandle, onChangeContent}) => {
     const [selectTab, setSelectedTab] = useState(0);
 
-    const changeTabHandle = (id) => setSelectedTab(id);
+    const changeTabHandle = (id) => {
+        setSelectedTab(id);
+        onChangeContent(id);
+    };
 
     const expandClickHandle = () => {
         if (!expand) expandHandle();
