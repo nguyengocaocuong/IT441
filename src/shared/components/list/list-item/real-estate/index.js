@@ -1,5 +1,5 @@
 import './real-estate.css';
-import house from '../../../images/house.png';
+import house from '../../../../images/house.png';
 
 const RealEstate = (props) => {
     const direction = ['Đông', 'Tây', 'Nam', 'Bắc', 'Đông Nam', 'Đông Bắc', 'Tây Nam', 'Tây Bắc'];

@@ -1,5 +1,5 @@
 import './edit.css';
-import house from '../../../../../images/house.png';
+import house from '../../../../../../images/house.png';
 
 export const Edit = ({item, onCancel}) => {
     const directions = ['Đông', 'Tây', 'Nam', 'Bắc', 'Đông Nam', 'Đông Bắc', 'Tây Nam', 'Tây Bắc'];

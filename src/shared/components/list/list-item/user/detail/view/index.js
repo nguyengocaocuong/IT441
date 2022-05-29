@@ -1,5 +1,5 @@
 import './view.css';
-import defaultAvatar from '../../../../../images/default-avatar.png';
+import defaultAvatar from '../../../../../../images/default-avatar.png';
 import { TableContainer, Paper, Table, TableHead, TableCell, TableRow, TableBody } from '@material-ui/core';
 
 const info = [
@@ -24,12 +24,13 @@ const info = [
     {id: 19, morning: true, afternoon: true, kpi: 5},
 ];
 
-export const View = ({item}) => {
+export const View = ({item, onEdit}) => {
     const total = {
         morning: info.reduce((cur, next) => cur + (next.morning ? 1 : 0), 0),
         afternoon: info.reduce((cur, next) => cur + (next.afternoon ? 1 : 0), 0),
         kpi: info.reduce((cur, next) => cur + next.kpi, 0)
     }
+
     return (
         <div className='user__view'>
             <div className='user--info'>
@@ -38,19 +39,23 @@ export const View = ({item}) => {
                 </div>
                 <div className='basic__info'>
                     <div className='basic__info__category'>
-                        <span>ID: {item.id}</span>
+                        <span className='view__title' >ID: </span>
+                        {item.id}
                     </div>
                     <div className='basic__info__category'>
-                        <span>Tên: {item.name}</span>
+                        <span className='view__title' >Tên: </span>
+                        {item.name}
                     </div>
                     <div className='basic__info__category'>
-                        <span>Ngày sinh: {item.dob}</span>
+                        <span className='view__title' >Ngày sinh: </span>
+                        {item.dob}
                     </div>
                     <div className='basic__info__category'>
-                        <span>Số điện thoại: {item.phone}</span>
+                        <span className='view__title' >Số điện thoại: </span>
+                        {item.phone}
                     </div>
 
-                    <button className='update--info__btn'>Cập nhật</button>
+                    <button className='update--info__btn' onClick={() => onEdit()} ><i className='fa fa-pencil-square-o' /> Cập nhật</button>
                 </div>
             </div>
             <div>
@@ -70,8 +75,8 @@ export const View = ({item}) => {
                                 info.map(i => (
                                     <TableRow key={i.id}>
                                         <TableCell align='center'>{i.id}</TableCell>
-                                        <TableCell align='center'>{i.morning ? <i class="fa fa-circle-o" /> : <i class="fa fa-times" />}</TableCell>
-                                        <TableCell align='center'>{i.afternoon ? <i class="fa fa-circle-o" /> : <i class="fa fa-times" />}</TableCell>
+                                        <TableCell align='center'>{i.morning ? <i className="fa fa-circle-o" /> : <i className="fa fa-times" />}</TableCell>
+                                        <TableCell align='center'>{i.afternoon ? <i className="fa fa-circle-o" /> : <i className="fa fa-times" />}</TableCell>
                                         <TableCell align='center'>{i.kpi}</TableCell>
                                     </TableRow>
                                 ))
