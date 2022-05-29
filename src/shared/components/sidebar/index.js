@@ -25,7 +25,7 @@ const tabs = [
     }
 ]
 
-const Sidebar = ({expand = true, expandHandle, onChangeContent}) => {
+const Sidebar = ({expand = true, expandHandle, onChangeContent, userData}) => {
     const [selectTab, setSelectedTab] = useState(0);
 
     const changeTabHandle = (id) => {
@@ -49,7 +49,7 @@ const Sidebar = ({expand = true, expandHandle, onChangeContent}) => {
                     {
                         expand &&
                         <div className='upper__info'>
-                            <p>Nguyễn Văn A</p>
+                            <p>{userData.username}</p>
                         </div>
                     }
                     {
