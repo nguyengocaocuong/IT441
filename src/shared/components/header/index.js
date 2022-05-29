@@ -1,7 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
 import './header.css';
 
-const Header = ({menuClickHandle}) => {
+const roleTranslate = [
+    {id: 0, title: 'Quản lý'},
+    {id: 1, title: 'Môi giới'},
+    {id: 2, title: 'Đăng bài'}
+];
+
+const Header = ({menuClickHandle, userData, onSignOut}) => {
     const [showDropdown, setShowDropdown] = useState(false);
     const clickOutside = useRef(null);
     const clickAccountBtn = useRef(null);
@@ -17,6 +23,8 @@ const Header = ({menuClickHandle}) => {
                 }
             }
         }
+
+        // console.log(roleTranslate[userData.role], userData);
 
         document.addEventListener("mousedown", clickOutsideHandle);
         return () => {
@@ -34,8 +42,7 @@ const Header = ({menuClickHandle}) => {
     });
 
     const logOutClickHandle = () => {
-        //do something
-
+        onSignOut();
         setShowDropdown(false);
     }
 
@@ -49,7 +56,7 @@ const Header = ({menuClickHandle}) => {
                     <i className="fa fa-bell" />
                 </div>
                 <div className='header__menu__account'>
-                    <p className={`role-title ${showDropdown && 'show--dropdown'}`} onClick={accountMenuClickHandle} ref={clickAccountBtn}>Quản lý</p>
+                    <p className={`role-title ${showDropdown && 'show--dropdown'}`} onClick={accountMenuClickHandle} ref={clickAccountBtn}>{roleTranslate[userData.role].title}</p>
                     <i className="fa fa-user" />
                     {
                         showDropdown &&

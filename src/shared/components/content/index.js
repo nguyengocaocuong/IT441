@@ -2,10 +2,10 @@ import Header from "../header";
 import './content.css';
 import MainContent from "./main-content";
 
-const Content = ({expandHandle, contentId=0}) => {
+const Content = ({expandHandle, contentId=0, userData, onSignOut}) => {
     return (
         <div className="content">
-            <Header menuClickHandle={expandHandle}/>
+            <Header userData={userData} menuClickHandle={expandHandle} onSignOut={onSignOut} />
             <MainContent contentId={contentId} />
         </div>
     )
