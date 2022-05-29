@@ -25,6 +25,11 @@
     margin: 5px 0px;
 }
 
+.view__title {
+    display: inline-block;
+    width: 120px;
+}
+
 .update--info__btn {
     background-color: rgb(0, 104, 22);
     outline: none;
@@ -33,4 +38,5 @@
     color: #fff;
     font-weight: 600;
     cursor: pointer;
+    margin-top: 60px;
 }

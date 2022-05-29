@@ -1,5 +1,5 @@
 import './user.css';
-import defaultAvatar from '../../../images/default-avatar.png';
+import defaultAvatar from '../../../../images/default-avatar.png';
 
 const User = (props) => {
     const onClickHandle = () => props.onClick(props);

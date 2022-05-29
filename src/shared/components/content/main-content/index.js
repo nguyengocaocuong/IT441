@@ -3,6 +3,7 @@ import List from '../../list';
 import RealEstate from '../../list/list-item/real-estate';
 import User from '../../list/list-item/user';
 import Filter from '../../filter';
+import CheckInOut from '../../../../pages/employee/checkin-out';
 
 const items = [
     {id: 1, title: 'Nhà A', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 3, floors: 3, owner: 'Trần Thị B', phone: '06798132'},
@@ -28,9 +29,10 @@ const users = [
 const MainContent = () => {
     return (
         <div className='main-content'>
-            <Filter />
+            {/* <Filter /> */}
             {/* <List items={items} component={RealEstate}/> */}
-            <List items={users} component={User}/>
+            {/* <List items={users} component={User}/> */}
+            <CheckInOut />
         </div>
     )
 }

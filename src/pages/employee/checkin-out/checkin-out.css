@@ -1,0 +1,79 @@
+.check__in__out {
+    margin: 0px 50px;
+    max-height: 580px;
+    overflow: auto;
+}
+
+.check__form__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #a3a3a3;
+    box-sizing: border-box;
+}
+
+.check__form__column {
+    width: 30%;
+}
+
+.checkinout__avatar {
+    width: 150px;
+}
+
+.avatar__container {
+    text-align: right;
+}
+
+.check__form__category > span {
+    display: inline-block;
+    width: 50px;
+}
+
+.check__form__category {
+    margin: 10px 0px;
+}
+
+.check__form__category > input[type='date'] {
+    padding: 5px;
+}
+
+.select__box {
+    padding: 5px;
+}
+
+.day {
+    border: 1px solid #a3a3a3;
+    width: 150px;
+}
+
+.work__item {
+    background-color: #ff5858;
+    border-top: 1px solid #a3a3a3;
+}
+
+.worked {
+    background-color: #58ff82;
+}
+
+.check__button {
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: #006a9b;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.employee__info span {
+    display: inline-block;
+    width: 150px;
+}
+
+.mid__column {
+    padding: 0px 10px;
+    border-left: 1px solid #a3a3a3;
+    border-right: 1px solid #a3a3a3;
+}
