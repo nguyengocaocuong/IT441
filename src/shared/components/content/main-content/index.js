@@ -26,13 +26,39 @@ const users = [
     {id: 5, name: 'Nguyễn Văn A', phone: '098765432', dob: '1/1/1990', image: ''},
 ];
 
-const MainContent = () => {
+const MainContent = ({contentId=0}) => {
+    const getContent = () => {
+        switch (contentId) {
+            case 0:
+                return (
+                    <>
+                        <Filter />
+                        <List items={items} component={RealEstate} />
+                    </>
+                );
+
+            case 1:
+                return (
+                    <>
+                        <Filter />
+                        <List items={users} component={User} />
+                    </>
+                )
+
+            case 2:
+                return (
+                    <>
+                        <CheckInOut />
+                    </>
+                )
+
+            default: return null;
+        }
+    }
+
     return (
         <div className='main-content'>
-            {/* <Filter /> */}
-            {/* <List items={items} component={RealEstate}/> */}
-            {/* <List items={users} component={User}/> */}
-            <CheckInOut />
+            {getContent()}
         </div>
     )
 }

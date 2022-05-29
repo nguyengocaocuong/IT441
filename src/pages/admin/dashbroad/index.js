@@ -5,13 +5,14 @@ import './dashbroad.css';
 
 const Dashbroad = () => {
     const [showSidebar, setShowSidebar] = useState(false);
+    const [contentId, setContentId] = useState(0);
 
     const showSidebarHandle = () => setShowSidebar(showSidebar => !showSidebar);
 
     return (
         <div className="dashbroad">
-            <Sidebar expand={showSidebar} expandHandle={showSidebarHandle} />
-            <Content expandHandle={showSidebarHandle} />
+            <Sidebar expand={showSidebar} expandHandle={showSidebarHandle} onChangeContent={(id) => setContentId(id)} />
+            <Content expandHandle={showSidebarHandle} contentId={contentId} />
         </div>
     )
 }
