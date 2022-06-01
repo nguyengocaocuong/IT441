@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: space-between;
     height: 50px;
+    /* background-color: var(--main-bg); */
+    color: black;
 }
 
 .header__menu {
@@ -46,7 +48,7 @@
 .show--dropdown,
 .role-title:hover {
     background-color: #000000;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 .account__dropdown {

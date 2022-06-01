@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css';
+import './assets/css/App.css';
 import Dashbroad from './pages/admin/dashbroad';
 import Authen from './shared/components/authen/idex';
 

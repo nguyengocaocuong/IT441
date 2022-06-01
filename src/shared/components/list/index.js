@@ -40,7 +40,7 @@ const List = ({items, component, user=false}) => {
 
     return (
         <div className='list-container'>
-            <p className='result--number'>{items.length} kết quả</p>
+            <h3 className='result--number'>{items.length} kết quả</h3>
             <div className='list'>
                 {
                     items.map((item, index) => (
