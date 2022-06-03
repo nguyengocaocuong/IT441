@@ -5,21 +5,26 @@ import './sidebar.css';
 const tabs = [
     {
         id: 0,
+        title: 'Tổng quan',
+        icon: 'fa fa-home'
+    },
+    {
+        id: 1,
         title: 'Thống kê bất động sản',
         icon: 'fa fa-list',
     },
     {
-        id: 1,
+        id: 2,
         title: 'Thống kê nhân viên',
         icon: 'fa fa-users',
     },
     {
-        id: 2,
+        id: 3,
         title: 'Chấm công',
         icon: 'fa fa-briefcase',
     },
     {
-        id: 3,
+        id: 4,
         title: 'Đăng bài',
         icon: 'fa fa-plus'
     }

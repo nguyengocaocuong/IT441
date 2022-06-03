@@ -5,10 +5,11 @@ import User from '../../list/list-item/user';
 import Filter from '../../filter';
 import CheckInOut from '../../../../pages/employee/checkin-out';
 import Post from '../../../../pages/employee/post';
+import Dashboard from '../../dashboard';
 
 const items = [
     {id: 1, title: 'Nhà A', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 3, floors: 3, owner: 'Trần Thị B', phone: '06798132'},
-    {id: 2, title: 'Nhà B', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 0, floors: 3, owner: 'Trần Thị B', phone: '06798132'},
+    {id: 2, title: 'Nhà B', image: '', address: 'Hai Bà Trưng, Hà Nội', area: 30, direction: 0, floors: 3, owner: 'Trần Thị B', phone: '06798132'},
     {id: 3, title: 'Nhà C', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 4, floors: 3, owner: 'Trần Thị B', phone: '06798132'},
     {id: 4, title: 'Nhà D', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 0, floors: 3, owner: 'Trần Thị B', phone: '06798132'},
     {id: 5, title: 'Nhà E', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 2, floors: 3, owner: 'Trần Thị B', phone: '06798132'},
@@ -30,7 +31,7 @@ const users = [
 const MainContent = ({contentId=0}) => {
     const getContent = () => {
         switch (contentId) {
-            case 0:
+            case 1:
                 return (
                     <>
                         <Filter />
@@ -38,7 +39,7 @@ const MainContent = ({contentId=0}) => {
                     </>
                 );
 
-            case 1:
+            case 2:
                 return (
                     <>
                         <Filter />
@@ -46,18 +47,21 @@ const MainContent = ({contentId=0}) => {
                     </>
                 );
 
-            case 2:
+            case 3:
                 return (
                     <>
                         <CheckInOut />
                     </>
                 );
 
-            case 3:
+            case 4:
                 return (
                     <Post />
                 );
-
+            case 0:
+                return (
+                    <Dashboard items={items}/>
+                )        
             default: return null;
         }
     }
