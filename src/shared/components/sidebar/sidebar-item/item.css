@@ -11,7 +11,9 @@
 .option:hover {
     color:var(--main-color);
 }
-
+.option.selected:hover {
+    color:white;
+}
 .option > i {
     font-size: large;
     width: 30px;

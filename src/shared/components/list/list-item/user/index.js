@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './user.css';
 import defaultAvatar from '../../../../images/default-avatar.png';
 

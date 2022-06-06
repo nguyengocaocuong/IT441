@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './sub-item.css';
 
 const SubItem = ({id, title, icon, selected=false}) => {

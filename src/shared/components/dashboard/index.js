@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './dashboard.css'
 import { Box, FormControl, InputLabel, Select, MenuItem } from '@material-ui/core'
+import ReactApexChart from 'react-apexcharts'
 import Table from '../table/index'
 const carditems = [
     { title: "Số BDS bán", value: 300, unit: "BĐS", icon: "fa fa-home" },
@@ -21,6 +22,38 @@ const renderItem = (item, index) => (
         <td>{item.owner}</td>
     </tr>
 )
+
+const chartSetting = {
+
+    series: [{
+        name: 'series1',
+        data: [31, 40, 28, 51, 42, 109, 100]
+    }, {
+        name: 'series2',
+        data: [11, 32, 45, 32, 34, 52, 41]
+    }],
+    options: {
+        chart: {
+            height: 350,
+            type: 'area'
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'smooth'
+        },
+        xaxis: {
+            type: 'datetime',
+            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+        },
+        tooltip: {
+            x: {
+                format: 'dd/MM/yy HH:mm'
+            },
+        },
+    },
+};
 const Dashboard = ({ items }) => {
     const [location, setLocation] = useState(items[0].id)
     return (
@@ -73,12 +106,16 @@ const Dashboard = ({ items }) => {
                 <div className='list-content'>
                     <h3>Danh sách BDS mới nhất</h3>
                     <Table
-                        limit="10"
+                        limit="5"
                         headeData={headerItems}
                         renderHead={(item, index) => renderHeader(item, index)}
                         bodyData={items}
                         renderBody={(item, index) => renderItem(item, index)}
                     />
+                </div>
+                <div className="chart-content">
+                    <h3>Biểu đồ biến động trong tuần</h3>
+                    <ReactApexChart options={chartSetting.options} series={chartSetting.series} type="area" height={337} />
                 </div>
             </div>
         </div>

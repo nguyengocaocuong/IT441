@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './main-content.css';
 import List from '../../list';
 import RealEstate from '../../list/list-item/real-estate';

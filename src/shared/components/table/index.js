@@ -1,4 +1,5 @@
-import { React, useState } from 'react'
+import React from 'react';
+import {  useState } from 'react'
 import './table.css'
 
 const Table = props => {
@@ -26,7 +27,6 @@ const Table = props => {
     }
     return (
         <div className='table-wrapper'>
-            <h1>{props.test}</h1>
             <table>
                 {
                     props.headeData && props.renderHead ? (

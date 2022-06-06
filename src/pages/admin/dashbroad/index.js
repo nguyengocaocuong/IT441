@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useState } from "react";
 import Content from "../../../shared/components/content";
 import Sidebar from "../../../shared/components/sidebar";

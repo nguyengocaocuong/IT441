@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './real-estate.css';
 import house from '../../../../images/house.png';
 

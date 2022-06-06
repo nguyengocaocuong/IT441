@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useState } from 'react';
 import Item from './sidebar-item';
 import './sidebar.css';
@@ -10,12 +12,12 @@ const tabs = [
     },
     {
         id: 1,
-        title: 'Thống kê bất động sản',
+        title: 'Bất động sản',
         icon: 'fa fa-list',
     },
     {
         id: 2,
-        title: 'Thống kê nhân viên',
+        title: 'Nhân viên',
         icon: 'fa fa-users',
     },
     {
@@ -30,7 +32,7 @@ const tabs = [
     }
 ]
 
-const Sidebar = ({expand = true, expandHandle, onChangeContent, userData}) => {
+const Sidebar = ({ expand = true, expandHandle, onChangeContent, userData }) => {
     const [selectTab, setSelectedTab] = useState(0);
 
     const changeTabHandle = (id) => {

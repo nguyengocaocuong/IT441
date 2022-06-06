@@ -94,12 +94,30 @@
 }
 
 .main{
-    margin-top:60px;
+    margin-top:20px;
+    
+    display: flex;
+    justify-content: space-between;
+}
+.main .list-content{
+    background-color: white;
     width: 60%;
 }
 .main .list-content h3{
-    margin-bottom:-20px;
+    margin-bottom:0px;
+    margin:0;
+    padding:5px 10px;
+    border-bottom: 1px solid rgb(207, 175, 175);
+}
+.chart-content h3{
+    margin:0;
+    margin-bottom:5px;
     padding:5px 10px;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid rgb(207, 175, 175);
+}
+.chart-content{
+    width: 38%;
+    height: 400px;
+    background-color: white;
 }

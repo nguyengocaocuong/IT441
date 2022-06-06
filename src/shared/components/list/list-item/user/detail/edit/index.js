@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './edit.css';
 import defaultAvatar from '../../../../../../images/default-avatar.png';
 import { TableContainer, Paper, Table, TableHead, TableCell, TableRow, TableBody } from '@material-ui/core';

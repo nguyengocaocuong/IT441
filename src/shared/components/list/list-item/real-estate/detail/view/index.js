@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './view.css';
 import house from '../../../../../../images/house.png';
 
