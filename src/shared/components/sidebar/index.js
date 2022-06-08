@@ -3,34 +3,8 @@ import React from 'react';
 import { useState } from 'react';
 import Item from './sidebar-item';
 import './sidebar.css';
-
-const tabs = [
-    {
-        id: 0,
-        title: 'Tổng quan',
-        icon: 'fa fa-home'
-    },
-    {
-        id: 1,
-        title: 'Bất động sản',
-        icon: 'fa fa-list',
-    },
-    {
-        id: 2,
-        title: 'Nhân viên',
-        icon: 'fa fa-users',
-    },
-    {
-        id: 3,
-        title: 'Chấm công',
-        icon: 'fa fa-briefcase',
-    },
-    {
-        id: 4,
-        title: 'Đăng bài',
-        icon: 'fa fa-plus'
-    }
-]
+import logo from '../../../assets/image/logo.png'
+import tabs from '../../../assets/jsonData/sidebar-items.json'
 
 const Sidebar = ({ expand = true, expandHandle, onChangeContent, userData }) => {
     const [selectTab, setSelectedTab] = useState(0);
@@ -47,8 +21,8 @@ const Sidebar = ({ expand = true, expandHandle, onChangeContent, userData }) => 
     return (
         <div className={`sidebar ${expand ? 'expand' : 'shrink'}`} onClick={expandClickHandle}>
             <div className='title'>
-                <i className="fa fa-home" />
-                {expand && <h2>BĐS</h2>}
+                {expand && <img src={logo}/>}
+                 <h2>BĐS</h2>
             </div>
             <div className='account-info'>
                 <i className="fa fa-user-circle account-info__avatar" />
@@ -76,7 +50,7 @@ const Sidebar = ({ expand = true, expandHandle, onChangeContent, userData }) => 
             </div>
             <div className='options'>
                 {
-                    tabs.map(tab => (
+                    tabs["saler"].map(tab => (
                         <Item
                             key={tab.id}
                             id={tab.id}

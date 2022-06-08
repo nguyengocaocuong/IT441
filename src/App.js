@@ -12,7 +12,7 @@ const accounts = [
 
 function App() {
     const [signInData, setSignInData] = useState(undefined);
-    const [authen, setAuthen] = useState(true);
+    const [authen, setAuthen] = useState(false);
 
     const authenHandle = (data) => {
         const result = accounts.findIndex(account => account.username === data.username && account.password === data.password);
@@ -20,7 +20,6 @@ function App() {
         if (result !== -1)
         {
             setAuthen(true);
-            console.log(accounts[result]);
             setSignInData(accounts[result]);
         }
     }
@@ -33,7 +32,7 @@ function App() {
     return (
         <div className="App">
             {
-                authen ? <Dashbroad userData={accounts[0]} onSignOut={() => signOutHandle()} /> : <Authen onSubmit={(data) => authenHandle(data)} />
+                authen ? <Dashbroad userData={signInData} onSignOut={() => signOutHandle()} /> : <Authen onSubmit={(data) => authenHandle(data)} />
             }
         </div>
     );

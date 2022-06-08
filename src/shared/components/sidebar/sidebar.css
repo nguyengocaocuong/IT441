@@ -21,9 +21,10 @@
     justify-content: center;
 }
 
-.title > i {
+.title img {
     margin: 0px 10px;
     font-size: xx-large;
+    width: 120px;
 }
 
 .title > h2 {
