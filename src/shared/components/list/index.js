@@ -7,6 +7,8 @@ import {Edit as RealEstateEdit} from './list-item/real-estate/detail/edit';
 import {View as UserView} from './list-item/user/detail/view';
 import {Edit as UserEdit} from './list-item/user/detail/edit';
 import './list.css';
+const header = [""]
+
 
 const List = ({items, component, user=false}) => {
     const PropComponent = component;

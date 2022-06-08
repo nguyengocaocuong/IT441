@@ -1,121 +1,190 @@
 import React, { useState } from 'react'
 import './dashboard.css'
-import { Box, FormControl, InputLabel, Select, MenuItem } from '@material-ui/core'
-import ReactApexChart from 'react-apexcharts'
-import Table from '../table/index'
+import { FormControl, InputLabel, Select, MenuItem } from '@material-ui/core'
+import Chart from "react-apexcharts";
+import Table from "../../components/table/index"
 const carditems = [
     { title: "Số BDS bán", value: 300, unit: "BĐS", icon: "fa fa-home" },
     { title: "Bị hủy", value: 80, unit: "BĐS", icon: "fa fa-ban" },
     { title: "Được quan tâm", value: 120, unit: "BĐS", icon: "fa fa-eye" },
     { title: "Chưa bán", value: 220, unit: "BĐS", icon: "fa fa-link" },
 ]
-
-const headerItems = ["Id", "Tên BDS", "Địa chỉ", "Chủ nhà"]
-const renderHeader = (item, index) => (
+const header = ["Mã", "Người bán", "Lợi nhuận", "Thời gian bán"]
+const headerLevel = ["Mã", "Tên", "KPI"]
+const data = [
+    { id: "0001", name: "Nguyễn Ngô Cao Cường", total: 32000000, date: "20/10/2019" },
+    { id: "0002", name: "Nguyễn Đình Cảnh", total: 12300000, date: "15/12/2020" },
+    { id: "0003", name: "Nguyễn Xuân Nghĩa", total: 1400000, date: "20/10/2021" },
+    { id: "0004", name: "Nguyễn Thị Cẩm Li", total: 21000000, date: "18/03/2022" },
+    { id: "0005", name: "Đào Duy Quang", total: 2000000, date: "20/11/2019" },
+]
+const data1 = [
+    { id: "1000", name: "Nguyễn Ngô Cao Cường", KPI: 33 },
+    { id: "2300", name: "Lê Minh Quân", KPI: 26 },
+    { id: "3100", name: "Nguyễn Đinh Minh", KPI: 20 },
+    { id: "1020", name: "Nguyễn Xuân Nghĩa", KPI: 13 },
+    { id: "3112", name: "Tạ Đăng Tạ", KPI: 10 },
+]
+const renderHead = (item, index) => (
     <th key={index}>{item}</th>
 )
-const renderItem = (item, index) => (
-    <tr key={index}>
-        <td>{item.id}</td>
-        <td>{item.title}</td>
-        <td>{item.address}</td>
-        <td>{item.owner}</td>
-    </tr>
-)
-
-const chartSetting = {
-
-    series: [{
-        name: 'series1',
-        data: [31, 40, 28, 51, 42, 109, 100]
-    }, {
-        name: 'series2',
-        data: [11, 32, 45, 32, 34, 52, 41]
-    }],
-    options: {
-        chart: {
-            height: 350,
-            type: 'area'
-        },
-        dataLabels: {
-            enabled: false
-        },
-        stroke: {
-            curve: 'smooth'
-        },
-        xaxis: {
-            type: 'datetime',
-            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-        },
-        tooltip: {
-            x: {
-                format: 'dd/MM/yy HH:mm'
-            },
-        },
-    },
-};
+const renderBody = (item, index) => {
+    return (
+        <tr key={index}>
+            <td>{item.id}</td>
+            <td>{item.name}</td>
+            <td>{"$" + new Intl.NumberFormat().format(item.total)}</td>
+            <td>{item.date}</td>
+        </tr>
+    )
+}
+const renderBody1 = (item, index) => {
+    return (
+        <tr key={index}>
+            <td>{item.id}</td>
+            <td>{item.name}</td>
+            <td>{item.KPI}</td>
+        </tr>
+    )
+}
 const Dashboard = ({ items }) => {
-    const [location, setLocation] = useState(items[0].id)
+    const [chartOptions, setChartOptions] = useState({
+        optionsMixedChart: {
+            chart: {
+                id: "basic-bar",
+                toolbar: {
+                    show: false
+                }
+            },
+            plotOptions: {
+                bar: {
+                    columnWidth: "50%"
+                }
+            },
+            stroke: {
+                width: [4, 0, 0]
+            },
+            xaxis: {
+                categories: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+            },
+            markers: {
+                size: 6,
+                strokeWidth: 3,
+                fillOpacity: 0,
+                strokeOpacity: 0,
+                hover: {
+                    size: 8
+                }
+            },
+            yaxis: {
+                tickAmount: 5,
+                min: 0,
+                max: 100
+            }
+        },
+        seriesMixedChart: [
+            {
+                name: "Doanh thu",
+                type: "line",
+                data: [30, 40, 25, 50, 49, 21, 70, 51, 33, 51, 35, 23]
+            },
+            {
+                name: "Đã bán",
+                type: "column",
+                data: [23, 12, 54, 61, 32, 56, 81, 19, 52, 2, 45, 45]
+            },
+            {
+                name: "Mới",
+                type: "column",
+                data: [62, 12, 45, 55, 76, 41, 23, 43, 12, 77, 34, 12]
+            }
+        ],
+
+    })
+    const [year, setYear] = useState(2020)
+    const handleChange = (e) => {
+        const max = 90;
+        const min = 30;
+        const newMixedSeries = [];
+        const newBarSeries = [];
+        chartOptions.seriesMixedChart.forEach((s) => {
+            const data = s.data.map(() => {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            });
+            newMixedSeries.push({ data: data, type: s.type });
+        });
+        setChartOptions({ ...chartOptions, ['seriesMixedChart']: newMixedSeries })
+        setYear(e.target.value)
+    }
     return (
         <div className='dashboard__content'>
-            <div className='dashboard__header'>
-                <div className='time'>
-                    <div className='icon-calender'><i className="fa fa-calendar"></i></div>
-                    <div className='time-line'>
-                        <div>
-                            <span>20/3/2000</span>-
-                            <span>20/3/2000</span>
-                        </div>
-
-                        <div>
-                            <i className="fa fa-arrow-circle-o-down"></i>
-                        </div>
-                    </div>
-                </div>
-                <div className='location'>
-                    <FormControl fullWidth id="form-control">
+            <div className='chart__content card'>
+                <div className='chart__header'>
+                    <FormControl sx={{ m: 1, minWidth: 120 }} id="form">
+                        <InputLabel id="demo-simple-select-helper-label">Year</InputLabel>
                         <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={location}
-                            onChange={(e) => setLocation(e.target.value)}
+                            labelId="demo-simple-select-helper-label"
+                            id="demo-simple-select-helper"
+                            value={year}
+                            label="Age"
+                            onChange={handleChange}
                         >
-                            {
-                                items.map(item => <MenuItem value={item.id} id={item.id}>{item.address}</MenuItem>)
-                            }
+                            <MenuItem value={2020}>2020</MenuItem>
+                            <MenuItem value={2021}>2021</MenuItem>
+                            <MenuItem value={2022}>2022</MenuItem>
+                            <MenuItem value={2023}>2023</MenuItem>
                         </Select>
                     </FormControl>
                 </div>
-            </div>
-            <div className='dashboard__card'>
-                {
-                    carditems.map(item => (
-                        <div className='card-item'>
-                            <div class="left-content">
-                                <h3>{item.title}</h3>
-                                <p>{item.value} <span>{item.unit}</span></p>
-                            </div>
-                            <div class="right-content">
-                                <i class={item.icon}></i>
-                            </div>
-                        </div>
-                    ))
-                }
-            </div>
-            <div className='main'>
-                <div className='list-content'>
-                    <h3>Danh sách BDS mới nhất</h3>
-                    <Table
-                        limit="5"
-                        headeData={headerItems}
-                        renderHead={(item, index) => renderHeader(item, index)}
-                        bodyData={items}
-                        renderBody={(item, index) => renderItem(item, index)}
+                <div className='chart__main'>
+                    <Chart
+                        options={chartOptions.optionsMixedChart}
+                        series={chartOptions.seriesMixedChart}
+                        type="line"
+                        width="100%"
+                        height="300px"
                     />
                 </div>
-                <div className="chart-content">
-                    <h3>Biểu đồ biến động trong tuần</h3>
-                    <ReactApexChart options={chartSetting.options} series={chartSetting.series} type="area" height={337} />
+            </div>
+            <div className='dashboard__list'>
+                <div className='card'>
+                    <div className='card__header'>
+                        <h2>Danh sách nhà mới bán</h2>
+                    </div>
+                    <div className='card__body'>
+                        <Table
+                            headeData={header}
+                            renderHead={(item, index) => renderHead(item, index)}
+                            bodyData={data}
+                            renderBody={(item, index) => renderBody(item, index)}
+                        />
+                    </div>
+                </div>
+                <div className='card'>
+                    <div className='card__header'>
+                        <h2>Xếp hạng nhân viên</h2>
+                        <FormControl sx={{ m: 1, minWidth: 120 }} id="form">
+                            {/* <InputLabel id="demo-simple-select-helper-label">Year</InputLabel> */}
+                            <Select
+                                labelId="demo-simple-select-helper-label"
+                                id="demo-simple-select-helper"
+                                value={year}
+                                label="Age"
+                                onChange={handleChange}
+                            >
+                                <MenuItem value={2020}>Saler</MenuItem>
+                                <MenuItem value={2021}>Poster</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </div>
+                    <div className='card__body'>
+                        <Table
+                            headeData={headerLevel}
+                            renderHead={(item, index) => renderHead(item, index)}
+                            bodyData={data1}
+                            renderBody={(item, index) => renderBody1(item, index)}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

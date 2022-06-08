@@ -1,123 +1,33 @@
-.dashboard__header {
-    display: flex;
-}
-
-.time {
-    display: flex;
-    margin-right: 20px;
-}
-
-.icon-calender {
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.icon-calender i {
-    font-size: 40px;
-    transform: scale(50%);
-}
-
-.time-line {
-    background-color: white;
-    width: 450px;
-    height: 40px;
-    line-height: 40px;
-    display: flex;
-    justify-content: space-between;
-}
-.time-line span:first-child{
-    margin-left:10px;
-    letter-spacing: 0.1em;
-    margin-right: 10px;
-}
-.time-line span:last-child{
-    margin-right:10px;
-    letter-spacing: 0.1em;
-    margin-left: 10px;
-}
-.time-line i{
-    display: inline-block;
-    margin-right: 10px;
-    color:rgb(96, 213, 248);
-    font-size: 20px;
-}
-.location #form-control {
-    height: 40px;
-    background-color: white;
-    padding: 0;
-    margin: 0px;
-    width: 200px;
-}
-
-.dashboard__card {
-    margin-top: 25px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.card-item {
-    background-color: white;
-    border-bottom: 2px solid rgb(53, 182, 241);
-    height: 100px;
-    width: 23%;
-    display: flex;
-    padding: 10px 15px;
-    box-sizing: border-box;
-}
-
-.card-item .left-content {
-    width: 70%;
-}
-
-.card-item .left-content h3 {
-    margin: 0px 0px 10px 0px;
-}
-
-.card-item .left-content span {
-    font-weight: lighter;
-    font-size: 15px;
-    color: gray;
-}
-
-.card-item .right-content {
-    width: 30%;
-    align-items: center;
+.chart__header #form{
+    width: 150px;
     text-align: center;
-    line-height: 100px;
-    height: 100%;
 }
-.card-item .right-content i{
-    font-size: 50px;
-    color:rgb(21, 192, 235)
+.card{
+    background-color: white;
+    padding: 15px;
+    margin-top:0px;
 }
-
-.main{
-    margin-top:20px;
-    
+.dashboard__list{
     display: flex;
     justify-content: space-between;
 }
-.main .list-content{
-    background-color: white;
-    width: 60%;
+.dashboard__list .card{
+    border-radius: 5px;
 }
-.main .list-content h3{
-    margin-bottom:0px;
-    margin:0;
-    padding:5px 10px;
-    border-bottom: 1px solid rgb(207, 175, 175);
+.dashboard__list .card:first-child{
+    width: 55%;
+    border-radius: 5px;
 }
-.chart-content h3{
-    margin:0;
-    margin-bottom:5px;
-    padding:5px 10px;
-    background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(207, 175, 175);
-}
-.chart-content{
+.dashboard__list .card:last-child{
     width: 38%;
-    height: 400px;
-    background-color: white;
+    border-radius: 5px;
+}
+.dashboard__list .card .card__header{
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard__list .card h2{
+    color:gray;
+    font-size: 20px;
+    margin:5px;
 }

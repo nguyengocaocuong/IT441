@@ -19,7 +19,7 @@ const Filter = () => {
             </div>
             <div className="filter__options">
                 <FormControl fullWidth >
-                    <InputLabel id="demo-simple-select-label">Lọc dữ liệu</InputLabel>
+                    {/* <InputLabel id="demo-simple-select-label">Lọc dữ liệu</InputLabel> */}
                     <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
