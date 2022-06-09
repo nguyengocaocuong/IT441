@@ -106,7 +106,6 @@ const Dashboard = ({ items }) => {
         const max = 90;
         const min = 30;
         const newMixedSeries = [];
-        const newBarSeries = [];
         chartOptions.seriesMixedChart.forEach((s) => {
             const data = s.data.map(() => {
                 return Math.floor(Math.random() * (max - min + 1)) + min;
