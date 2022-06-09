@@ -3,14 +3,9 @@ import React from 'react';
 import './filter.css';
 import { FormControl, InputLabel, MenuItem, Select } from '@material-ui/core';
 import { useState } from 'react';
-const optionValues = [
-    { id: 0, title: "Tất cả" },
-    { id: 1, title: "Đã bán" },
-    { id: 2, title: "Chưa bán" },
-    { id: 3, title: "Bị hủy" },
-]
-const Filter = () => {
-    const [options, setOptions] = useState(0)
+
+const Filter = ({handleChangeKey,options}) => {
+    const [optionId, setOptionId] = useState(0)
     return (
         <div className='filter'>
             <div className="filter_search">
@@ -23,12 +18,12 @@ const Filter = () => {
                     <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
-                        value={options}
-                        label="Age"
-                        onChange={(e) => setOptions(e.target.value)}
+                        value={optionId}
+                        label="options"
+                        onChange={(e) => {setOptionId(e.target.value);handleChangeKey(e.target.value)}}
                     >
                         {
-                            optionValues.map(item => <MenuItem value={item.id}>{item.title}</MenuItem>)
+                            options.map(item => <MenuItem value={item.id}>{item.title}</MenuItem>)
                         }
                     </Select>
                 </FormControl>
