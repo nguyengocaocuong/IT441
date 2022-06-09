@@ -32,7 +32,7 @@ function App() {
     return (
         <div className="App">
             {
-                authen ? <Dashbroad userData={accounts[0]} onSignOut={() => signOutHandle()} /> : <Authen onSubmit={(data) => authenHandle(data)} />
+                authen ? <Dashbroad userData={accounts[1]} onSignOut={() => signOutHandle()} /> : <Authen onSubmit={(data) => authenHandle(data)} />
             }
         </div>
     );
