@@ -1,0 +1,42 @@
+{
+    "admin": [
+        {
+            "id": 0,
+            "title": "Tổng quan",
+            "icon": "fa fa-home"
+        },
+        {
+            "id": 1,
+            "title": "Bất động sản",
+            "icon": "fa fa-list"
+        },
+        {
+            "id": 2,
+            "title": "Nhân viên",
+            "icon": "fa fa-users"
+        },
+        {
+            "id": 3,
+            "title": "Chấm công",
+            "icon": "fa fa-briefcase"
+        }
+    ],
+    "saler": [
+        {
+            "id": 5,
+            "title": "Bất động sản",
+            "icon": "fa fa-list"
+        },
+        {
+            "id": 6,
+            "title": "Thống kê",
+            "icon": "fa fa-pie-chart"
+        },
+        {
+            "id": 3,
+            "title": "Chấm công",
+            "icon": "fa fa-table"
+        }
+    ],
+    "poster": []
+}

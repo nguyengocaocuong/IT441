@@ -1,31 +1,12 @@
+import React from 'react';
+
 import { useState } from 'react';
 import Item from './sidebar-item';
 import './sidebar.css';
+import logo from '../../../assets/image/logo.png'
+import tabs from '../../../assets/jsonData/sidebar-items.json'
 
-const tabs = [
-    {
-        id: 0,
-        title: 'Thống kê bất động sản',
-        icon: 'fa fa-list',
-    },
-    {
-        id: 1,
-        title: 'Thống kê nhân viên',
-        icon: 'fa fa-users',
-    },
-    {
-        id: 2,
-        title: 'Chấm công',
-        icon: 'fa fa-briefcase',
-    },
-    {
-        id: 3,
-        title: 'Đăng bài',
-        icon: 'fa fa-plus'
-    }
-]
-
-const Sidebar = ({expand = true, expandHandle, onChangeContent, userData}) => {
+const Sidebar = ({ expand = true, expandHandle, onChangeContent, userData }) => {
     const [selectTab, setSelectedTab] = useState(0);
 
     const changeTabHandle = (id) => {
@@ -40,8 +21,8 @@ const Sidebar = ({expand = true, expandHandle, onChangeContent, userData}) => {
     return (
         <div className={`sidebar ${expand ? 'expand' : 'shrink'}`} onClick={expandClickHandle}>
             <div className='title'>
-                <i className="fa fa-home" />
-                {expand && <h2>BĐS</h2>}
+                {expand && <img src={logo}/>}
+                 <h2>BĐS</h2>
             </div>
             <div className='account-info'>
                 <i className="fa fa-user-circle account-info__avatar" />
@@ -56,10 +37,6 @@ const Sidebar = ({expand = true, expandHandle, onChangeContent, userData}) => {
                         expand &&
                         <div className='below__info'>
                             <div>
-                                <i className="fa fa-circle status--active" />
-                                <span>Online</span>
-                            </div>
-                            <div>
                                 <i className="fa fa-bell notification" />
                                 <span>Thông báo</span>
                             </div>
@@ -69,7 +46,7 @@ const Sidebar = ({expand = true, expandHandle, onChangeContent, userData}) => {
             </div>
             <div className='options'>
                 {
-                    tabs.map(tab => (
+                    tabs["admin"].map(tab => (
                         <Item
                             key={tab.id}
                             id={tab.id}

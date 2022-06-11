@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Modal } from '@material-ui/core';
 import { useState } from 'react';
 import {View as RealEstateView} from './list-item/real-estate/detail/view';
@@ -5,6 +7,8 @@ import {Edit as RealEstateEdit} from './list-item/real-estate/detail/edit';
 import {View as UserView} from './list-item/user/detail/view';
 import {Edit as UserEdit} from './list-item/user/detail/edit';
 import './list.css';
+const header = [""]
+
 
 const List = ({items, component, user=false}) => {
     const PropComponent = component;
@@ -40,7 +44,7 @@ const List = ({items, component, user=false}) => {
 
     return (
         <div className='list-container'>
-            <p className='result--number'>{items.length} kết quả</p>
+            <h3 className='result--number'>{items.length} kết quả</h3>
             <div className='list'>
                 {
                     items.map((item, index) => (

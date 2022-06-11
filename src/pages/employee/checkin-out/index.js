@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './checkin-out.css';
 import avatar from '../../../shared/images/default-avatar.png';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';

@@ -1,0 +1,33 @@
+.chart__header #form{
+    width: 150px;
+    text-align: center;
+}
+.card{
+    background-color: white;
+    padding: 15px;
+    margin-top:0px;
+}
+.dashboard__list{
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard__list .card{
+    border-radius: 5px;
+}
+.dashboard__list .card:first-child{
+    width: 55%;
+    border-radius: 5px;
+}
+.dashboard__list .card:last-child{
+    width: 38%;
+    border-radius: 5px;
+}
+.dashboard__list .card .card__header{
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard__list .card h2{
+    color:gray;
+    font-size: 20px;
+    margin:5px;
+}

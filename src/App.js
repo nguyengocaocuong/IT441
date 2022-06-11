@@ -1,5 +1,6 @@
+import React from 'react';
 import { useState } from 'react';
-import './App.css';
+import './assets/css/App.css';
 import Dashbroad from './pages/admin/dashbroad';
 import Authen from './shared/components/authen/idex';
 
@@ -11,7 +12,7 @@ const accounts = [
 
 function App() {
     const [signInData, setSignInData] = useState(undefined);
-    const [authen, setAuthen] = useState(false);
+    const [authen, setAuthen] = useState(true);
 
     const authenHandle = (data) => {
         const result = accounts.findIndex(account => account.username === data.username && account.password === data.password);
@@ -19,7 +20,6 @@ function App() {
         if (result !== -1)
         {
             setAuthen(true);
-            console.log(accounts[result]);
             setSignInData(accounts[result]);
         }
     }
@@ -32,7 +32,7 @@ function App() {
     return (
         <div className="App">
             {
-                authen ? <Dashbroad userData={signInData} onSignOut={() => signOutHandle()} /> : <Authen onSubmit={(data) => authenHandle(data)} />
+                authen ? <Dashbroad userData={accounts[0]} onSignOut={() => signOutHandle()} /> : <Authen onSubmit={(data) => authenHandle(data)} />
             }
         </div>
     );

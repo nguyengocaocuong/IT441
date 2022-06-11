@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Header from "../header";
 import './content.css';
 import MainContent from "./main-content";

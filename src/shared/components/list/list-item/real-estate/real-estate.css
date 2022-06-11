@@ -7,6 +7,7 @@
     padding-right: 10px;
     cursor: pointer;
     transition: box-shadow 250ms, border 250ms, background-color 250ms;
+    margin-right: 20px;
 }
 
 .real-estate:hover {
