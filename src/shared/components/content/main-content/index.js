@@ -1,100 +1,130 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Chart from "react-apexcharts";
 
 import './main-content.css';
-import List from '../../list';
-import User from '../../list/list-item/user';
 import Filter from '../../filter';
 import CheckInOut from '../../../../pages/employee/checkin-out';
 import Post from '../../../../pages/employee/post';
 import Dashboard from '../../dashboard';
-import { Table } from '@material-ui/core';
 import Badge from '../../badge';
-
-const items = [
-    { id: 1, title: 'Nhà A', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 3, floors: 3, owner: 'Trần Thị B', phone: '06798132' },
-    { id: 2, title: 'Nhà B', image: '', address: 'Hai Bà Trưng, Hà Nội', area: 30, direction: 0, floors: 3, owner: 'Trần Thị B', phone: '06798132' },
-    { id: 3, title: 'Nhà C', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 4, floors: 3, owner: 'Trần Thị B', phone: '06798132' },
-    { id: 4, title: 'Nhà D', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 0, floors: 3, owner: 'Trần Thị B', phone: '06798132' },
-    { id: 5, title: 'Nhà E', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 2, floors: 3, owner: 'Trần Thị B', phone: '06798132' },
-    { id: 6, title: 'Nhà F', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 0, floors: 3, owner: 'Trần Thị B', phone: '06798132' },
-    { id: 7, title: 'Nhà G', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 1, floors: 3, owner: 'Trần Thị B', phone: '06798132' },
-    { id: 8, title: 'Nhà H', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 0, floors: 3, owner: 'Trần Thị B', phone: '06798132' },
-    { id: 9, title: 'Nhà I', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 5, floors: 3, owner: 'Trần Thị B', phone: '06798132' },
-    { id: 10, title: 'Nhà J', image: '', address: 'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', area: 30, direction: 0, floors: 3, owner: 'Trần Thị B', phone: '06798132' }
-];
-const optionValuesBDS = [
-    { id: 0, title: "Tất cả" },
-    { id: 1, title: "Đã bán" },
-    { id: 2, title: "Chưa bán" },
-    { id: 3, title: "Bị hủy" },
-]
-const optionValuesUser = [
-    { id: 0, title: "Tất cả" },
-    { id: 1, title: "Người bán" },
-    { id: 2, title: "Người đăng" },
-]
-const users = [
-    { id: 1, name: 'Nguyễn Văn A', phone: '098765432', dob: '1/1/1990', image: '' },
-    { id: 2, name: 'Nguyễn Văn A', phone: '098765432', dob: '1/1/1990', image: '' },
-    { id: 3, name: 'Nguyễn Văn A', phone: '098765432', dob: '1/1/1990', image: '' },
-    { id: 4, name: 'Nguyễn Văn A', phone: '098765432', dob: '1/1/1990', image: '' },
-    { id: 5, name: 'Nguyễn Văn A', phone: '098765432', dob: '1/1/1990', image: '' },
-];
-const dataValue = [
-    { id: "BDS0022", idNV: "NV001", total: 12, date: '01/01/2022', status: 1 },
-    { id: "BDS0122", idNV: "NV020", total: 212, date: '01/01/2022', status: 2 },
-    { id: "BDS0401", idNV: "NV023", total: 124, date: '01/01/2022', status: 2 },
-    { id: "BDS0201", idNV: "NV012", total: 12, date: '01/01/2022', status: 2 },
-    { id: "BDS1002", idNV: "NV043", total: 0, date: '01/01/2022', status: 2 },
-    { id: "BDS0202", idNV: "NV123", total: 2, date: '01/01/2022', status: 1 },
-    { id: "BDS0305", idNV: "NV012", total: 20, date: '01/01/2022', status: 3 },
-    { id: "BDS0019", idNV: "NV201", total: 76, date: '01/01/2022', status: 3 },
-    { id: "BDS0204", idNV: "NV402", total: 45, date: '01/01/2022', status: 3 },
-    { id: "BDS2202", idNV: "NV200", total: 23, date: '01/01/2022', status: 1 },
-    { id: "BDS0211", idNV: "NV406", total: 1, date: '01/01/2022', status: 2 },
-    { id: "BDS0513", idNV: "NV863", total: 21, date: '01/01/2022', status: 3 },
-    { id: "BDS0002", idNV: "NV421", total: 43, date: '01/01/2022', status: 1 },
-    { id: "BDS0452", idNV: "NV345", total: 21, date: '01/01/2022', status: 2 },
-    { id: "BDS1202", idNV: "NV341", total: 43, date: '01/01/2022', status: 2 },
-    { id: "BDS0002", idNV: "NV653", total: 12, date: '01/01/2022', status: 1 },
-    { id: "BDS0104", idNV: "NV333", total: 54, date: '01/01/2022', status: 1 },
-    { id: "BDS0401", idNV: "NV777", total: 86, date: '01/01/2022', status: 3 }
-]
-
-const headerBDS = ["Mã bài đăng", "Người đăng", "Quan tâm", "Ngày đăng", "Trạng thái"]
+import Table from '../../table/index'
+import { Modal } from '@material-ui/core';
+import jsonData from '../../../../assets/jsonData/admin-main-content.json'
 
 const renderHead = (item, index) => (
     <th key={index}>{item}</th>
 )
-const renderBody = (item, index) => {
-    return (
-        <tr key={index}>
-            <td>{item.id}</td>
-            <td>{item.idNV}</td>
-            <td>{new Intl.NumberFormat().format(item.total)}</td>
-            <td>{item.date}</td>
-            <td><Badge content={item.status === 1 ? "Đã bán" : (item.status == 2 ? "Chưa bán" : "Bị Hủy")} type={item.status === 1 ? "success" : (item.status == 2 ? "primary" : "danger")} /></td>
-        </tr>
-    )
-}
+
 const MainContent = ({ contentId = 0 }) => {
-    const [data, setData] = useState(dataValue)
-    const getDataByKey = (key) => {
-        setData(dataValue.filter(item => key == 0 || key == item.status))
+    const [detailInfo, setDetailInfo] = useState({ open: false });
+    const [data, setData] = useState(jsonData.dataValue)
+    const [dataUser, setDataUser] = useState(jsonData.dataValueUser)
+    const [key, setKey] = useState(0)
+    useEffect(() => {
+        if (contentId == 1) setData(jsonData.dataValue.filter(item => key == 0 || item.status == key))
+        if (contentId == 2) setDataUser(jsonData.dataValueUser.filter(item => key == 0 || item.status == key))
+    }, [key])
+
+
+    const onCloseHandle = () => {
+        setDetailInfo({ open: false })
+    };
+    const getDetailUser = (user) => {
+        const max = 90;
+        const min = 30;
+        let newMixedSeries = []
+        jsonData.dataValueUser[0].chartOptions.seriesMixedChart.forEach((s) => {
+            const data = s.data.map(() => {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            });
+            newMixedSeries.push({ data: data, type: s.type });
+        })
+        jsonData.dataValueUser[0].chartOptions.seriesMixedChart = newMixedSeries
+        return <div>
+            <div className='user__info'>
+                <div className='user__info-left'>
+                    <div className='info__header'>
+                        <h2>{user.name}</h2>
+                        <h4>Ngày đăng nhập cuối : <span>{user.lastLogin}</span></h4>
+                    </div>
+                    <div className='info__body'>
+                        <div className='info__body-left'>
+                            <p>Date of Birth : <span>{user.dob}</span></p>
+                            <p>Phone Number : <span>{user.phone}</span></p>
+                            <p>Email : <span>{user.email}</span></p>
+                            <p>Address: <span>{user.address}</span></p>
+                        </div>
+                        <div className='info__body-right'>
+                            <p>Rule: <span>{user.rule == 2 ? 'Người bán' : 'Người đăng'}</span></p>
+                            <p>Trạng thái: <span>{user.status == 1 ? 'Online' : 'Ofline'}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div className='user__info-right'>
+                    <div className='user__avatar'>
+                        <img src={user.avatar} />
+                    </div>
+                </div>
+            </div>
+            <div className='chart__kpi'>
+                <h3>Thống kê</h3>
+                <Chart
+                        options={jsonData.dataValueUser[0].chartOptions.optionsMixedChart}
+                        series={jsonData.dataValueUser[0].chartOptions.seriesMixedChart}
+                        type="line"
+                        width="100%"
+                        height="300px"
+                    />
+            </div>
+        </div>
+    }
+    const getDetailBDS = (bds) => {
+
+    }
+    const getDetailContent = () => (
+        detailInfo.open ? getDetailUser(detailInfo.item) : <></>
+    )
+
+    const handleClick = (item) => {
+        setDetailInfo({item, open: true });
+    }
+    const renderBody = (item, index) => {
+        return (
+            <tr key={index} onClick={() => handleClick(item)}>
+                <td>{item.id}</td>
+                <td>{item.idNV}</td>
+                <td>{new Intl.NumberFormat().format(item.total)}</td>
+                <td>{item.date}</td>
+                <td><Badge content={item.status === 1 ? "Đã bán" : (item.status == 2 ? "Chưa bán" : "Bị Hủy")} type={item.status === 1 ? "success" : (item.status == 2 ? "primary" : "danger")} /></td>
+            </tr>
+        )
+    }
+    const renderBodyUser = (item, index) => {
+        return (
+            <tr key={index} onClick={() => handleClick(item)}>
+                {/* <td>{<img className='avatar-user' src={item.avatar} />}</td> */}
+                <td><i className="fa fa-user-circle sample"></i></td>
+                <td>{item.name}</td>
+                <td>{item.idNV}</td>
+                <td>{item == 2 ? 'Người bán' : 'Người đăng'}</td>
+                <td>{item.lastLogin}</td>
+                <td><Badge content={item.status === 1 ? "Online" : "Ofline"} type={item.status === 1 ? "success" : "danger"} /></td>
+            </tr>
+        )
     }
     const getContent = () => {
         switch (contentId) {
             case 1:
                 return (
                     <>
-                        <Filter handleChangeKey={getDataByKey} options={optionValuesBDS} />
-                        {/* <ListRealEstate data={[...data]}/> */}
+                        <Filter handleChangeKey={setKey} options={jsonData.optionValuesBDS} />
                         <div className='list-real-estate'>
                             <Table
+                                key={1}
                                 limit={8}
-                                headeData={headerBDS}
+                                headeData={jsonData.headerBDS}
                                 renderHead={(item, index) => renderHead(item, index)}
-                                bodyData={[...data]}
+                                bodyData={data}
                                 renderBody={(item, index) => renderBody(item, index)}
                             />
                         </div>
@@ -104,16 +134,18 @@ const MainContent = ({ contentId = 0 }) => {
             case 2:
                 return (
                     <>
-                        <Filter options={optionValuesUser} />
+                        <Filter options={jsonData.optionValuesUser} handleChangeKey={setKey} />
                         <div className='list-real-estate'>
                             <Table
+                                key={2}
                                 limit={8}
-                                headeData={headerBDS}
+                                headeData={jsonData.headeUser}
                                 renderHead={(item, index) => renderHead(item, index)}
-                                bodyData={data}
-                                renderBody={(item, index) => renderBody(item, index)}
+                                bodyData={dataUser}
+                                renderBody={(item, index) => renderBodyUser(item, index)}
                             />
                         </div>
+
                     </>
                 );
 
@@ -130,7 +162,7 @@ const MainContent = ({ contentId = 0 }) => {
                 );
             case 0:
                 return (
-                    <Dashboard items={items} />
+                    <Dashboard />
                 )
             default: return null;
         }
@@ -139,6 +171,18 @@ const MainContent = ({ contentId = 0 }) => {
     return (
         <div className='main-content'>
             {getContent()}
+            <Modal
+                open={detailInfo.open}
+                onClose={onCloseHandle}
+            >
+                <div className='paper'>
+                    {/* <div className='paper__header'>
+                        <h3>Title</h3>
+                        <i class="fa fa-window-close" onClick={onCloseHandle}></i>
+                    </div> */}
+                    {getDetailContent()}
+                </div>
+            </Modal>
         </div>
     )
 }

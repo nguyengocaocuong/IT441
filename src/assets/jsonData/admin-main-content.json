@@ -1,0 +1,395 @@
+{
+    "optionValuesBDS": [
+      {
+        "id": 0,
+        "title": "Tất cả"
+      },
+      {
+        "id": 1,
+        "title": "Đã bán"
+      },
+      {
+        "id": 2,
+        "title": "Chưa bán"
+      },
+      {
+        "id": 3,
+        "title": "Bị hủy"
+      }
+    ],
+    "optionValuesUser": [
+      {
+        "id": 0,
+        "title": "Tất cả"
+      },
+      {
+        "id": 1,
+        "title": "Người bán"
+      },
+      {
+        "id": 2,
+        "title": "Người đăng"
+      }
+    ],
+    "dataValue": [
+      {
+        "id": "BDS0022",
+        "idNV": "NV001",
+        "total": 12,
+        "date": "01/01/2022",
+        "status": 1
+      },
+      {
+        "id": "BDS0122",
+        "idNV": "NV020",
+        "total": 212,
+        "date": "01/01/2022",
+        "status": 2
+      },
+      {
+        "id": "BDS0401",
+        "idNV": "NV023",
+        "total": 124,
+        "date": "01/01/2022",
+        "status": 2
+      },
+      {
+        "id": "BDS0201",
+        "idNV": "NV012",
+        "total": 12,
+        "date": "01/01/2022",
+        "status": 2
+      },
+      {
+        "id": "BDS1002",
+        "idNV": "NV043",
+        "total": 0,
+        "date": "01/01/2022",
+        "status": 2
+      },
+      {
+        "id": "BDS0202",
+        "idNV": "NV123",
+        "total": 2,
+        "date": "01/01/2022",
+        "status": 1
+      },
+      {
+        "id": "BDS0305",
+        "idNV": "NV012",
+        "total": 20,
+        "date": "01/01/2022",
+        "status": 3
+      },
+      {
+        "id": "BDS0019",
+        "idNV": "NV201",
+        "total": 76,
+        "date": "01/01/2022",
+        "status": 3
+      },
+      {
+        "id": "BDS0204",
+        "idNV": "NV402",
+        "total": 45,
+        "date": "01/01/2022",
+        "status": 3
+      },
+      {
+        "id": "BDS2202",
+        "idNV": "NV200",
+        "total": 23,
+        "date": "01/01/2022",
+        "status": 1
+      },
+      {
+        "id": "BDS0211",
+        "idNV": "NV406",
+        "total": 1,
+        "date": "01/01/2022",
+        "status": 2
+      },
+      {
+        "id": "BDS0513",
+        "idNV": "NV863",
+        "total": 21,
+        "date": "01/01/2022",
+        "status": 3
+      },
+      {
+        "id": "BDS0002",
+        "idNV": "NV421",
+        "total": 43,
+        "date": "01/01/2022",
+        "status": 1
+      },
+      {
+        "id": "BDS0452",
+        "idNV": "NV345",
+        "total": 21,
+        "date": "01/01/2022",
+        "status": 2
+      },
+      {
+        "id": "BDS1202",
+        "idNV": "NV341",
+        "total": 43,
+        "date": "01/01/2022",
+        "status": 2
+      },
+      {
+        "id": "BDS0002",
+        "idNV": "NV653",
+        "total": 12,
+        "date": "01/01/2022",
+        "status": 1
+      },
+      {
+        "id": "BDS0104",
+        "idNV": "NV333",
+        "total": 54,
+        "date": "01/01/2022",
+        "status": 1
+      },
+      {
+        "id": "BDS0401",
+        "idNV": "NV777",
+        "total": 86,
+        "date": "01/01/2022",
+        "status": 3
+      }
+    ],
+    "headeUser": [
+      "",
+      "Tên nhân viên",
+      "Mã nhân viên",
+      "Vai trò",
+      "Đăng nhập gần nhất",
+      "Trạng thái"
+    ],
+    "dataValueUser": [
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Nguyễn Ngô Cao Cường",
+        "idNV": "NV0012",
+        "rule": 2,
+        "lastLogin": "06/06/2022",
+        "status": 1,
+        "dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Doanh thu",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Nguyễn Đình Cảnh",
+        "idNV": "NV0013",
+        "rule": 3,
+        "lastLogin": "12/05/2022",
+        "status": 0
+      },
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Nguyễn Đức Lâm",
+        "idNV": "NV0014",
+        "rule": 3,
+        "lastLogin": "21/05/2022",
+        "status": 0
+      },
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Lê Bảo Hiếu",
+        "idNV": "NV0015",
+        "rule": 2,
+        "lastLogin": "06/06/2022",
+        "status": 1
+      },
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Chu Thị Hiền",
+        "idNV": "NV0022",
+        "rule": 3,
+        "lastLogin": "06/06/2022",
+        "status": 1
+      },
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Nguyễn Đức Hiếu",
+        "idNV": "NV0042",
+        "rule": 2,
+        "lastLogin": "06/06/2022",
+        "status": 0
+      },
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Phạm Thị Minh Thư",
+        "idNV": "NV0045",
+        "rule": 2,
+        "lastLogin": "06/06/2022",
+        "status": 1
+      },
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Hoảng Hải Long",
+        "idNV": "NV0042",
+        "rule": 3,
+        "lastLogin": "06/06/2022",
+        "status": 1
+      },
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Nguyễn Lương Hải",
+        "idNV": "NV0067",
+        "rule": 2,
+        "lastLogin": "06/06/2022",
+        "status": 0
+      },
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Trần Đức Hiếu",
+        "idNV": "NV0235",
+        "rule": 2,
+        "lastLogin": "06/06/2022",
+        "status": 0
+      },
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Đặng Thai Mai",
+        "idNV": "NV1245",
+        "rule": 3,
+        "lastLogin": "06/06/2022",
+        "status": 1
+      },
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Đặng Phương Anh",
+        "idNV": "NV5232",
+        "rule": 3,
+        "lastLogin": "06/06/2022",
+        "status": 1
+      },
+      {
+        "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
+        "name": "Phạm Thị Mai Tuyết",
+        "idNV": "NV2512",
+        "rule": 2,
+        "lastLogin": "06/06/2022",
+        "status": 0
+      }
+    ],
+    "headerBDS": [
+      "Mã bài đăng",
+      "Người đăng",
+      "Quan tâm",
+      "Ngày đăng",
+      "Trạng thái"
+    ]
+  }

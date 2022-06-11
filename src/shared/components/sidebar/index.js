@@ -37,10 +37,6 @@ const Sidebar = ({ expand = true, expandHandle, onChangeContent, userData }) => 
                         expand &&
                         <div className='below__info'>
                             <div>
-                                <i className="fa fa-circle status--active" />
-                                <span>Online</span>
-                            </div>
-                            <div>
                                 <i className="fa fa-bell notification" />
                                 <span>Thông báo</span>
                             </div>

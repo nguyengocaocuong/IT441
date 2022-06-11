@@ -1,10 +1,10 @@
 import React from 'react';
 
 import './filter.css';
-import { FormControl, InputLabel, MenuItem, Select } from '@material-ui/core';
+import { FormControl,  MenuItem, Select } from '@material-ui/core';
 import { useState } from 'react';
 
-const Filter = ({handleChangeKey,options}) => {
+const Filter = ({ handleChangeKey, options }) => {
     const [optionId, setOptionId] = useState(0)
     return (
         <div className='filter'>
@@ -14,16 +14,15 @@ const Filter = ({handleChangeKey,options}) => {
             </div>
             <div className="filter__options">
                 <FormControl fullWidth >
-                    {/* <InputLabel id="demo-simple-select-label">Lọc dữ liệu</InputLabel> */}
                     <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         value={optionId}
                         label="options"
-                        onChange={(e) => {setOptionId(e.target.value);handleChangeKey(e.target.value)}}
+                        onChange={(e) => { setOptionId(e.target.value); handleChangeKey(e.target.value) }}
                     >
                         {
-                            options.map(item => <MenuItem value={item.id}>{item.title}</MenuItem>)
+                            options.map((item, index) => <MenuItem key={index} value={item.id}>{item.title}</MenuItem>)
                         }
                     </Select>
                 </FormControl>
@@ -31,5 +30,6 @@ const Filter = ({handleChangeKey,options}) => {
         </div>
     )
 }
+
 
 export default Filter;
