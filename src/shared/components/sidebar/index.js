@@ -50,7 +50,7 @@ const Sidebar = ({ expand = true, expandHandle, onChangeContent, userData }) => 
             </div>
             <div className='options'>
                 {
-                    tabs["poster"].map(tab => (
+                    tabs[userData.role].map(tab => (
                         <Item
                             key={tab.id}
                             id={tab.id}

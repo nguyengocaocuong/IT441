@@ -1,0 +1,62 @@
+input {
+    padding: 5px;
+    outline: none;
+}
+
+.add__category {
+    display: flex;
+    margin: 10px 0px;
+}
+
+.add__category__inRow {
+    display: flex;
+    width: 45%;
+}
+.add__category__inRow .add__category__input {
+    width: auto;
+}
+
+.add__category__title {
+    display: block;
+    width: 150px;
+}
+
+.add__category__input {
+    width: 500px;
+}
+
+.add__category__input > input {
+    width: 100%;
+}
+
+.add__category__btn__group {
+    margin: auto;
+    width: 500px;
+    margin-top: 60px;
+}
+
+.add__category__btn__group > input {
+    width: 100px;
+    height: 40px;
+    margin: 0px 10px;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.add__category__btn__group > input[value='Đăng bài'] {
+    background-color: #3cb642;
+}
+
+.add__category__btn__group > input[value='Hủy'] {
+    background-color: #df5757;
+}
+
+h3 {
+    margin-bottom: 30px !important;
+}
+
+.owner__info {
+    padding-top: 10px;
+    border-top: 1px solid #a3a3a3;
+}

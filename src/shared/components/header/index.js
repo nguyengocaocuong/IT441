@@ -26,8 +26,6 @@ const Header = ({menuClickHandle, userData, onSignOut}) => {
             }
         }
 
-        // console.log(roleTranslate[userData.role], userData);
-
         document.addEventListener("mousedown", clickOutsideHandle);
         return () => {
             document.removeEventListener("mousedown", clickOutsideHandle);

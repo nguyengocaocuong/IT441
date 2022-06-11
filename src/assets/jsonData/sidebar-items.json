@@ -1,5 +1,5 @@
-{
-    "admin": [
+[
+    [
         {
             "id": 0,
             "title": "Tổng quan",
@@ -21,36 +21,36 @@
             "icon": "fa fa-briefcase"
         }
     ],
-    "saler": [
+    [
         {
-            "id": 5,
+            "id": 0,
             "title": "Bất động sản",
             "icon": "fa fa-list"
         },
         {
-            "id": 6,
+            "id": 1,
             "title": "Thống kê",
             "icon": "fa fa-pie-chart"
         },
         {
-            "id": 3,
+            "id": 2,
             "title": "Chấm công",
             "icon": "fa fa-table"
         }
     ],
-    "poster": [
+    [
         {
-            "id": 7,
+            "id": 0,
             "title": "Bất động sản",
             "icon": "fa fa-list"
         },
         {
-            "id": 8,
+            "id": 1,
             "title": "Thêm bất động sản",
-            "icon": "fa fa-pie-chart"
+            "icon": "fa fa-plus"
         },
         {
-            "id": 9,
+            "id": 2,
             "title": "Thống kê",
             "icon": "fa fa-pie-chart"
         },
@@ -60,4 +60,4 @@
             "icon": "fa fa-table"
         }
     ]
-}
+]

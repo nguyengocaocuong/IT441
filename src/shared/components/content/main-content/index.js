@@ -30,47 +30,49 @@ const users = [
     {id: 5, name: 'Nguyễn Văn A', phone: '098765432', dob: '1/1/1990', image: ''},
 ];
 
-const MainContent = ({contentId=0}) => {
-    const getContent = () => {
-        switch (contentId) {
-            case 1:
-                return (
-                    <>
-                        <Filter />
-                        <List items={items} component={RealEstate} />
-                    </>
-                );
+const MainContent = ({content, contentId}) => {
+    const ImportedContent = content;
+    // const getContent = () => {
+    //     switch (contentId) {
+    //         case 1:
+    //             return (
+    //                 <>
+    //                     <Filter />
+    //                     <List items={items} component={RealEstate} />
+    //                 </>
+    //             );
 
-            case 2:
-                return (
-                    <>
-                        <Filter />
-                        <List items={users} component={User} user />
-                    </>
-                );
+    //         case 2:
+    //             return (
+    //                 <>
+    //                     <Filter />
+    //                     <List items={users} component={User} user />
+    //                 </>
+    //             );
 
-            case 3:
-                return (
-                    <>
-                        <CheckInOut />
-                    </>
-                );
+    //         case 3:
+    //             return (
+    //                 <>
+    //                     <CheckInOut />
+    //                 </>
+    //             );
 
-            case 4:
-                return (
-                    <Post />
-                );
-            case 0:
-                return (
-                    <Dashboard items={items}/>
-                )        
-            default: return null;
-        }
-    }
+    //         case 4:
+    //             return (
+    //                 <Post />
+    //             );
+
+    //         case 0:
+    //             return (
+    //                 <Dashboard items={items}/>
+    //             )   
+    //         default: return null;
+    //     }
+    // }
 
     return (
         <div className='main-content'>
-            {getContent()}
+            <ImportedContent contentId={contentId} />
         </div>
     )
 }
