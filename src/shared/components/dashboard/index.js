@@ -3,12 +3,6 @@ import './dashboard.css'
 import { FormControl, InputLabel, Select, MenuItem } from '@material-ui/core'
 import Chart from "react-apexcharts";
 import Table from "../../components/table/index"
-const carditems = [
-    { title: "Số BDS bán", value: 300, unit: "BĐS", icon: "fa fa-home" },
-    { title: "Bị hủy", value: 80, unit: "BĐS", icon: "fa fa-ban" },
-    { title: "Được quan tâm", value: 120, unit: "BĐS", icon: "fa fa-eye" },
-    { title: "Chưa bán", value: 220, unit: "BĐS", icon: "fa fa-link" },
-]
 const header = ["Mã", "Người bán", "Lợi nhuận", "Thời gian bán"]
 const headerLevel = ["Mã", "Tên", "KPI"]
 const data = [
@@ -47,7 +41,7 @@ const renderBody1 = (item, index) => {
         </tr>
     )
 }
-const Dashboard = ({ items }) => {
+const Dashboard = () => {
     const [chartOptions, setChartOptions] = useState({
         optionsMixedChart: {
             chart: {
@@ -65,7 +59,7 @@ const Dashboard = ({ items }) => {
                 width: [4, 0, 0]
             },
             xaxis: {
-                categories: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+                categories: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
             },
             markers: {
                 size: 6,
