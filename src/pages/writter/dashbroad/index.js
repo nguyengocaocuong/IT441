@@ -5,7 +5,7 @@ import Sidebar from "../../../shared/components/sidebar";
 import { Content as PosterContent } from '../content';
 import './dashboard.css';
 
-const Dashbroad = ({userData, onSignOut}) => {
+export const Dashbroad = ({userData, onSignOut}) => {
     const [showSidebar, setShowSidebar] = useState(false);
     const [contentId, setContentId] = useState(0);
 
@@ -18,5 +18,3 @@ const Dashbroad = ({userData, onSignOut}) => {
         </div>
     )
 }
-
-export default Dashbroad;

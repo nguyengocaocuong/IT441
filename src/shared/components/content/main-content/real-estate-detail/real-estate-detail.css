@@ -1,0 +1,31 @@
+.real-estate__info{
+    margin-top:-20px;
+}
+.real-estate__info h1{
+    margin-bottom:7px;
+    padding:0px;
+    color: rgb(230, 75, 36);
+}
+.real-estate__info h3{
+    text-align: center;
+    text-transform: uppercase!important;
+    color: rgb(43, 68, 44);
+}
+
+.real-estate__related-info .poster-info__text{
+    display: flex;
+    justify-content: space-around;
+}
+.poster-info__text p > span{
+    color:rgb(167, 171, 170);
+    font-style: italic;
+}
+
+.poster-info__text p{
+    margin:0px;
+    padding:2px;
+}
+.poster-info{
+    border-bottom: 1px double rgb(218, 214, 214);
+    padding-bottom: 10px;
+}

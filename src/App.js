@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import './assets/css/App.css';
-import Dashbroad from './pages/writter/dashbroad';
+import { Dashbroad as WritterDashbroad } from './pages/writter/dashbroad';
+import { Dashbroad as AdminDashbroad } from './pages/admin/dashbroad';
 import Authen from './shared/components/authen/idex';
 
 const accounts = [
@@ -12,7 +13,7 @@ const accounts = [
 
 function App() {
     const [signInData, setSignInData] = useState(undefined);
-    const [authen, setAuthen] = useState(true);
+    const [authen, setAuthen] = useState(false);
 
     const authenHandle = (data) => {
         const result = accounts.findIndex(account => account.username === data.username && account.password === data.password);
@@ -29,10 +30,18 @@ function App() {
         setSignInData(undefined);
     }
 
+    const getDashbroad = () => {
+        switch (signInData.role) {
+            case 0: return <AdminDashbroad userData={accounts[0]} onSignOut={() => signOutHandle()} />;
+            case 1: return <WritterDashbroad userData={accounts[2]} onSignOut={() => signOutHandle()} />;
+            default: return null;
+        }
+    }
+
     return (
         <div className="App">
             {
-                authen ? <Dashbroad userData={accounts[2]} onSignOut={() => signOutHandle()} /> : <Authen onSubmit={(data) => authenHandle(data)} />
+                authen ? getDashbroad() : <Authen onSubmit={(data) => authenHandle(data)} />
             }
         </div>
     );
