@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import { Modal } from '@material-ui/core';
 
 import CheckInOut from './content-item/check-in-out';
 import Dashboard from '../../../shared/components/dashboard';
@@ -9,12 +10,12 @@ import jsonData from '../../../assets/jsonData/admin-main-content.json';
 import UserDetail from '../../../shared/components/content/main-content/user-detail/UserDetail';
 import RealEstateDetail from '../../../shared/components/content/main-content/real-estate-detail/RealEstateDetail';
 import Badge from '../../../shared/components/badge';
-
+import './model.css'
 const renderHead = (item, index) => (
     <th key={index}>{item}</th>
 )
 
-export const Content = ({contentId}) => {
+export const Content = ({ contentId }) => {
     const [key, setKey] = useState(0);
     const [detailInfo, setDetailInfo] = useState({ open: false });
     const [data, setData] = useState(jsonData.dataValue)
@@ -30,11 +31,11 @@ export const Content = ({contentId}) => {
             case 0:
                 return (
                     <Dashboard />
-                )  
+                )
 
             case 1:
                 return (
-                    <>
+                    <div>
                         <Filter handleChangeKey={setKey} options={jsonData.optionValuesBDS} />
                         <div className='list-real-estate'>
                             <Table
@@ -46,12 +47,12 @@ export const Content = ({contentId}) => {
                                 renderBody={(item, index) => renderBody(item, index)}
                             />
                         </div>
-                    </>
+                    </div>
                 );
 
             case 2:
                 return (
-                    <>
+                    <div>
                         <Filter options={jsonData.optionValuesUser} handleChangeKey={setKey} />
                         <div className='list-real-estate'>
                             <Table
@@ -64,14 +65,14 @@ export const Content = ({contentId}) => {
                             />
                         </div>
 
-                    </>
+                    </div>
                 );
 
             case 3:
                 return (
-                    <>
+                    <div>
                         <CheckInOut />
-                    </>
+                    </div>
                 );
 
             // case 4:
@@ -85,14 +86,14 @@ export const Content = ({contentId}) => {
     const onCloseHandle = () => {
         setDetailInfo({ open: false })
     };
-   
+
 
     const getDetailContent = () => (
-        detailInfo.open ?( contentId === 2 ? <UserDetail user={detailInfo.item}/> : <RealEstateDetail realEstate={detailInfo.item}/>): <></>
+        detailInfo.open ? (contentId === 2 ? <UserDetail user={detailInfo.item} /> : <RealEstateDetail realEstate={detailInfo.item} />) : <div></div>
     )
 
     const handleClick = (item) => {
-        setDetailInfo({item, open: true });
+        setDetailInfo({ item, open: true });
     }
 
     const renderBody = (item, index) => {
@@ -124,6 +125,18 @@ export const Content = ({contentId}) => {
     return (
         <div>
             {getContent(contentId)}
+            <Modal
+                open={detailInfo.open}
+                onClose={onCloseHandle}
+            >
+                <div className='paper'>
+                    {/* <div className='paper__header'>
+                    <h3>Title</h3>
+                    <i class="fa fa-window-close" onClick={onCloseHandle}></i>
+                </div> */}
+                    {getDetailContent()}
+                </div>
+            </Modal>
         </div>
     )
 }
