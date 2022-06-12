@@ -8,8 +8,8 @@ import Authen from './shared/components/authen/idex';
 
 const accounts = [
     {username: 'admin', password: '123', role: 0},
-    {username: 'staff1', password: '123', role: 1},
-    {username: 'staff2', password: '123', role: 2}
+    {username: 'saler', password: '123', role: 1},
+    {username: 'poster', password: '123', role: 2}
 ];
 
 function App() {
