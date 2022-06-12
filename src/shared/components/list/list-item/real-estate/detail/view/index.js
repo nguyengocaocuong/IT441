@@ -36,11 +36,11 @@ export const View = ({item, onEdit}) => {
                 </div>
                 <div className='detail__category'>
                     <span>Thông tin chủ nhà: </span>
-                    <span>{item.owner}</span>
+                    <span>{item.owner.name}</span>
                 </div>
                 <div className='detail__category'>
                     <span>Liên hệ: </span>
-                    <span>{item.phone}</span>
+                    <span>{item.owner.phone}</span>
                 </div>
 
                 <div className='detail__info__control'>

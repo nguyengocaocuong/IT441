@@ -40,11 +40,11 @@ export const Edit = ({item, onCancel}) => {
                 </div>
                 <div className='detail__category'>
                     <span>Thông tin chủ nhà: </span>
-                    <input type='text' value={item.owner} />
+                    <input type='text' value={item.owner.name} />
                 </div>
                 <div className='detail__category'>
                     <span>Liên hệ: </span>
-                    <input type='text' value={item.phone} />
+                    <input type='text' value={item.owner.phone} />
                 </div>
 
                 <div className='detail__info__control'>

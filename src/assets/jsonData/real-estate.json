@@ -1,0 +1,132 @@
+[
+    {
+        "id": 1,
+        "area": 60,
+        "price": 2.5,
+        "address": "Số 1, Trần Đại Nghĩa",
+        "floors": 3,
+        "owner": {
+            "name": "Nguyễn Văn C",
+            "phone": "01234567",
+            "email": "a@gmail.com"
+        },
+        "direction": 4
+    },
+    {
+        "id": 2,
+        "area": 60,
+        "price": 2.5,
+        "address": "Số 1, Trần Đại Nghĩa",
+        "floors": 3,
+        "owner": {
+            "name": "Nguyễn Văn C",
+            "phone": "01234567",
+            "email": "a@gmail.com"
+        },
+        "direction": 4
+    },
+    {
+        "id": 3,
+        "area": 60,
+        "price": 2.5,
+        "address": "Số 1, Trần Đại Nghĩa",
+        "floors": 3,
+        "owner": {
+            "name": "Nguyễn Văn C",
+            "phone": "01234567",
+            "email": "a@gmail.com"
+        },
+        "direction": 4
+    },
+    {
+        "id": 4,
+        "area": 60,
+        "price": 2.5,
+        "address": "Số 1, Trần Đại Nghĩa",
+        "floors": 3,
+        "owner": {
+            "name": "Nguyễn Văn C",
+            "phone": "01234567",
+            "email": "a@gmail.com"
+        },
+        "direction": 4
+    },
+    {
+        "id": 5,
+        "area": 60,
+        "price": 2.5,
+        "address": "Số 1, Trần Đại Nghĩa",
+        "floors": 3,
+        "owner": {
+            "name": "Nguyễn Văn C",
+            "phone": "01234567",
+            "email": "a@gmail.com"
+        },
+        "direction": 4
+    },
+    {
+        "id": 6,
+        "area": 60,
+        "price": 2.5,
+        "address": "Số 1, Trần Đại Nghĩa",
+        "floors": 3,
+        "owner": {
+            "name": "Nguyễn Văn C",
+            "phone": "01234567",
+            "email": "a@gmail.com"
+        },
+        "direction": 4
+    },
+    {
+        "id": 7,
+        "area": 60,
+        "price": 2.5,
+        "address": "Số 1, Trần Đại Nghĩa",
+        "floors": 3,
+        "owner": {
+            "name": "Nguyễn Văn C",
+            "phone": "01234567",
+            "email": "a@gmail.com"
+        },
+        "direction": 4
+    },
+    {
+        "id": 8,
+        "area": 60,
+        "price": 2.5,
+        "address": "Số 1, Trần Đại Nghĩa",
+        "floors": 3,
+        "owner": {
+            "name": "Nguyễn Văn C",
+            "phone": "01234567",
+            "email": "a@gmail.com"
+        },
+        "direction": 4
+    },
+    {
+        "id": 9,
+        "area": 60,
+        "price": 2.5,
+        "address": "Số 1, Trần Đại Nghĩa",
+        "floors": 3,
+        "owner": {
+            "name": "Nguyễn Văn C",
+            "phone": "01234567",
+            "email": "a@gmail.com"
+        },
+        "direction": 4
+    },
+    {
+        "id": 10,
+        "area": 60,
+        "price": 2.5,
+        "address": "Số 1, Trần Đại Nghĩa",
+        "floors": 3,
+        "owner": {
+            "name": "Nguyễn Văn C",
+            "phone": "01234567",
+            "email": "a@gmail.com"
+        },
+        "direction": 4
+    }
+]
