@@ -3,7 +3,7 @@ import React from 'react';
 import './view.css';
 import house from '../../../../../../images/house.png';
 
-export const View = ({item, onEdit}) => {
+export const View = ({item, onEdit, canEdit}) => {
     const directions = ['Đông', 'Tây', 'Nam', 'Bắc', 'Đông Nam', 'Đông Bắc', 'Tây Nam', 'Tây Bắc'];
     return (
         <div className='view__detail'>
@@ -14,9 +14,6 @@ export const View = ({item, onEdit}) => {
                 <div className='detail__category'>
                     <span>ID: </span>
                     <span>{item.id}</span>
-                </div>
-                <div className='detail__category'>
-                    <span>{item.title}</span>
                 </div>
                 <div className='detail__category'>
                     <span>Địa chỉ: </span>
@@ -43,10 +40,13 @@ export const View = ({item, onEdit}) => {
                     <span>{item.owner.phone}</span>
                 </div>
 
-                <div className='detail__info__control'>
-                    <button><i className="fa fa-trash delete-btn" />Xóa</button>
-                    <input type='submit' value='Chỉnh sửa' onClick={() => onEdit()} />
-                </div>
+                {
+                    canEdit &&
+                    <div className='detail__info__control'>
+                        <button><i className="fa fa-trash delete-btn" />Xóa</button>
+                        <input type='submit' value='Chỉnh sửa' onClick={() => onEdit()} />
+                    </div>
+                }
             </div>
         </div>
     );

@@ -16,7 +16,7 @@
     color:var(--main-color-blue);
 }
 
-.paper {
+.paper__list {
     width: 650px;
     margin: auto;
     outline: none;

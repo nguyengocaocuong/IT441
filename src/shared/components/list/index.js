@@ -33,12 +33,12 @@ const List = ({items, component, user=false}) => {
             if (edit)
                 return <UserEdit item={detailInfo} onCancel={cancelEditHandle} />
             else
-                return <UserView item={detailInfo} onEdit={editHandle} />
+                return <UserView item={detailInfo} onEdit={editHandle} canEdit={user} />
         } else {
             if (edit)
                 return <RealEstateEdit item={detailInfo} onCancel={cancelEditHandle} />
             else
-                return <RealEstateView item={detailInfo} onEdit={editHandle} />
+                return <RealEstateView item={detailInfo} onEdit={editHandle} canEdit={user} />
         }
     }
 
@@ -56,7 +56,7 @@ const List = ({items, component, user=false}) => {
                 open={detailInfo.open}
                 onClose={onCloseHandle}
             >
-                <div className='paper'>
+                <div className='paper__list'>
                     {getDetailContent()}
                 </div>
             </Modal>
