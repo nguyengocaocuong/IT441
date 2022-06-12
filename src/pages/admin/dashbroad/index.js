@@ -1,11 +1,12 @@
 import React from 'react';
 
 import { useState } from "react";
-import Content from "../../../shared/components/content";
+import Content from '../../../shared/components/content';
+import { Content as AdminContent } from '../content';
 import Sidebar from "../../../shared/components/sidebar";
 import './dashbroad.css';
 
-const Dashbroad = ({userData, onSignOut}) => {
+export const Dashbroad = ({userData, onSignOut}) => {
     const [showSidebar, setShowSidebar] = useState(false);
     const [contentId, setContentId] = useState(0);
 
@@ -14,9 +15,7 @@ const Dashbroad = ({userData, onSignOut}) => {
     return (
         <div className="dashbroad">
             <Sidebar userData={userData} expand={showSidebar} expandHandle={showSidebarHandle} onChangeContent={(id) => setContentId(id)} />
-            <Content userData={userData} expandHandle={showSidebarHandle} contentId={contentId} onSignOut={onSignOut} />
+            <Content userData={userData} expandHandle={showSidebarHandle} contentId={contentId} onSignOut={onSignOut} content={AdminContent} />
         </div>
     )
 }
-
-export default Dashbroad;
