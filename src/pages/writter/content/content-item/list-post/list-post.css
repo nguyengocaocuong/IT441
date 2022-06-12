@@ -1,0 +1,20 @@
+.sold {
+    color: #ff0000;
+}
+
+.waiting {
+    color: #e5ff00;
+}
+
+.available {
+    color: #00ff0d;
+}
+
+.paper {
+    outline: none;
+    width: fit-content;
+}
+
+.caring__cell {
+    cursor: pointer;
+}

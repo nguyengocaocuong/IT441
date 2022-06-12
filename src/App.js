@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './assets/css/App.css';
-import Dashbroad from './pages/admin/dashbroad';
+import Dashbroad from './pages/writter/dashbroad';
 import Authen from './shared/components/authen/idex';
 
 const accounts = [
@@ -32,7 +32,7 @@ function App() {
     return (
         <div className="App">
             {
-                authen ? <Dashbroad userData={accounts[0]} onSignOut={() => signOutHandle()} /> : <Authen onSubmit={(data) => authenHandle(data)} />
+                authen ? <Dashbroad userData={accounts[2]} onSignOut={() => signOutHandle()} /> : <Authen onSubmit={(data) => authenHandle(data)} />
             }
         </div>
     );

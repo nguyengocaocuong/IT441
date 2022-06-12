@@ -1,0 +1,10 @@
+.edit__modal {
+    width: 800px;
+    background-color: #f3f4f5;
+    height: 600px;
+    margin-top: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+    border-radius: 10px;
+}
