@@ -60,7 +60,7 @@ const ListPost = ({columns, data}) => {
                 open={showModal}
                 onClose={() => setShowModal(false)}
             >
-                <div className='paper'>
+                <div className='paper__list__post'>
                     {getModalContent()}
                 </div>
             </Modal>

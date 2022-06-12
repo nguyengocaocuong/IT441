@@ -34,9 +34,9 @@ const RealEstate = (props) => {
                     <span>{props.floors}</span>
                 </div>
                 <div className='info__category'>
-                    <span>Số tầng: </span>
-                    <span>{props.owner} </span>
-                    (<span className='phone-number'>{props.phone}</span>)
+                    <span>Thông tin chủ: </span>
+                    <span>{props.owner.name} </span>
+                    (<span className='phone-number'>{props.owner.phone}</span>)
                 </div>
             </div>
         </div>

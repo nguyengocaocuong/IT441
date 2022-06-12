@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './assets/css/App.css';
 import { Dashbroad as WritterDashbroad } from './pages/writter/dashbroad';
 import { Dashbroad as AdminDashbroad } from './pages/admin/dashbroad';
+import { Dashbroad as BrokerDashbroad } from './pages/broker/dashbroad';
 import Authen from './shared/components/authen/idex';
 
 const accounts = [
@@ -33,7 +34,8 @@ function App() {
     const getDashbroad = () => {
         switch (signInData.role) {
             case 0: return <AdminDashbroad userData={accounts[0]} onSignOut={() => signOutHandle()} />;
-            case 1: return <WritterDashbroad userData={accounts[2]} onSignOut={() => signOutHandle()} />;
+            case 1: return <BrokerDashbroad userData={accounts[1]} onSignOut={() => signOutHandle()} />;
+            case 2: return <WritterDashbroad userData={accounts[2]} onSignOut={() => signOutHandle()} />;
             default: return null;
         }
     }
