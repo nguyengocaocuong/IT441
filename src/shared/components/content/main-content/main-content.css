@@ -5,7 +5,11 @@
     overflow-y: auto;
     overflow-x: hidden;
 }
-
+.main-content > h1{
+    padding:0;
+    margin-top:-10px;
+    margin-bottom:30px;
+}
 .list-real-estate {
     margin-top: 20px;
 }

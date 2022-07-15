@@ -114,7 +114,7 @@ const Dashboard = () => {
             <div className='chart__content card'>
                 <div className='chart__header'>
                     <FormControl sx={{ m: 1, minWidth: 120 }} id="form">
-                        <InputLabel id="demo-simple-select-helper-label">Year</InputLabel>
+                        <InputLabel id="demo-simple-select-helper-label">Chọn thời gian</InputLabel>
                         <Select
                             labelId="demo-simple-select-helper-label"
                             id="demo-simple-select-helper"

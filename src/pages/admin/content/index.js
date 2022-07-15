@@ -5,7 +5,6 @@ import CheckInOut from './content-item/check-in-out';
 import Dashboard from '../../../shared/components/dashboard';
 import Table from '../../../shared/components/table';
 import Filter from '../../../shared/components/filter';
-import Post from '../../employee/post';
 import jsonData from '../../../assets/jsonData/admin-main-content.json';
 import UserDetail from '../../../shared/components/content/main-content/user-detail/UserDetail';
 import RealEstateDetail from '../../../shared/components/content/main-content/real-estate-detail/RealEstateDetail';

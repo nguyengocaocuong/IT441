@@ -14,7 +14,7 @@ const accounts = [
 ];
 
 function App() {
-    const [signInData, setSignInData] = useState(undefined);
+    const [signInData, setSignInData] = useState(accounts[0]);
     const [authen, setAuthen] = useState(false);
 
     const authenHandle = (data) => {
@@ -24,6 +24,7 @@ function App() {
         {
             setAuthen(true);
             setSignInData(accounts[result]);
+            localStorage.setItem('user',JSON.stringify(accounts[result]))
         }
     }
 

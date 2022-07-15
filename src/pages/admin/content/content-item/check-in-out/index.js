@@ -49,7 +49,6 @@ const CheckInOut = ({user={id: 1, name: 'Nguyễn Văn A', dob: '1/1/1990', depa
 
     return (
         <div className='check__in__out'>
-            <h3>Chấm công</h3>
             <div className='check__form__container'>
                 <div className='check__form__column employee__info'>
                     <div>

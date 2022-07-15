@@ -22,7 +22,7 @@ const Sidebar = ({ expand = true, expandHandle, onChangeContent, userData }) => 
         <div className={`sidebar ${expand ? 'expand' : 'shrink'}`} onClick={expandClickHandle}>
             <div className='title'>
                 {expand && <img src={logo}/>}
-                 <h2>BĐS</h2>
+                 <h2>{!expand ? 'Nhà đất': ''}</h2>
             </div>
             <div className='account-info'>
                 <i className="fa fa-user-circle account-info__avatar" />
