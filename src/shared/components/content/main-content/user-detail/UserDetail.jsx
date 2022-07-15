@@ -2,6 +2,7 @@ import React from 'react'
 import jsonData from '../../../../../assets/jsonData/admin-main-content.json'
 import Chart from "react-apexcharts";
 import './user-detail.css'
+import { useState } from 'react';
 
 const UserDetail = ({ user }) => {
     const max = 90;
@@ -14,6 +15,10 @@ const UserDetail = ({ user }) => {
         newMixedSeries.push({ data: data, type: s.type });
     })
     jsonData.dataValueUser[0].chartOptions.seriesMixedChart = newMixedSeries
+
+    const [role, setRole] = useState(user.rule);
+    const [editRole, setEditRole] = useState(false);
+
     return (
         <div>
             <div className='user__info'>
@@ -30,7 +35,20 @@ const UserDetail = ({ user }) => {
                             <p>Address: <span>{user.address}</span></p>
                         </div>
                         <div className='info__body-right'>
-                            <p>Rule: <span>{user.rule == 2 ? 'Người bán' : 'Người đăng'}</span></p>
+                            <p>Rule: 
+                                {
+                                    !editRole ? <span onClick={() => setEditRole(true)}>{user.rule == 2 ? 'Người bán' : 'Người đăng'}</span> : (
+                                        <select value={role} onChange={(e) => {
+                                                setRole(e.target.value)
+                                                setEditRole(false)
+                                            }
+                                        }>
+                                            <option value={1}>Người bán</option>
+                                            <option value={2}>Người đăng</option>
+                                        </select>
+                                    )
+                                }
+                            </p>
                             <p>Trạng thái: <span>{user.status == 1 ? 'Online' : 'Ofline'}</span></p>
                         </div>
                     </div>
