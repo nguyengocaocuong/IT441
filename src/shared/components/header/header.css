@@ -29,8 +29,12 @@
 
 .header__menu__account > p {
     display: inline-block;
+    background-color: white;
 }
-
+.header__menu__account > p:hover{
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 .header__menu__account > i {
     margin-left: 20px;
     font-size: large;

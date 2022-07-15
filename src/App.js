@@ -14,7 +14,7 @@ const accounts = [
 
 function App() {
     const [signInData, setSignInData] = useState(accounts[0]);
-    const [authen, setAuthen] = useState(true);
+    const [authen, setAuthen] = useState(false);
 
     const authenHandle = (data) => {
         const result = accounts.findIndex(account => account.username === data.username && account.password === data.password);
@@ -23,6 +23,7 @@ function App() {
         {
             setAuthen(true);
             setSignInData(accounts[result]);
+            localStorage.setItem('user',JSON.stringify(accounts[result]))
         }
     }
 

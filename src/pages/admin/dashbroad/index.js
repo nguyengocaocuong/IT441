@@ -6,7 +6,7 @@ import { Content as AdminContent } from '../content';
 import Sidebar from "../../../shared/components/sidebar";
 import './dashbroad.css';
 
-export const Dashbroad = ({userData, onSignOut}) => {
+export const Dashbroad = ({ userData, onSignOut }) => {
     const [showSidebar, setShowSidebar] = useState(false);
     const [contentId, setContentId] = useState(0);
 
