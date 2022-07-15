@@ -37,14 +37,14 @@ const UserDetail = ({ user }) => {
                         <div className='info__body-right'>
                             <p>Rule: 
                                 {
-                                    !editRole ? <span onClick={() => setEditRole(true)}>{user.rule == 2 ? 'Người bán' : 'Người đăng'}</span> : (
+                                    !editRole ? <span onClick={() => setEditRole(true)}>{role == 2 ? 'Người bán' : 'Người đăng'}</span> : (
                                         <select value={role} onChange={(e) => {
                                                 setRole(e.target.value)
                                                 setEditRole(false)
                                             }
                                         }>
-                                            <option value={1}>Người bán</option>
-                                            <option value={2}>Người đăng</option>
+                                            <option value={1}>Người đăng</option>
+                                            <option value={2}>Người bán</option>
                                         </select>
                                     )
                                 }
