@@ -228,12 +228,15 @@
             "yaxis": {
               "tickAmount": 5,
               "min": 0,
-              "max": 100
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
             }
           },
           "seriesMixedChart": [
             {
-              "name": "Doanh thu",
+              "name": "Kpi",
               "type": "line",
               "data": [
                 30,
