@@ -38,18 +38,18 @@ const RealEstateDetail = ({ realEstate }) => {
     ]
     return (
         <div>
-            <div class="real-estate__info">
+            <div className="real-estate__info">
                 <h1>#RE0001</h1>
-                <div class="real-estate__related-info">
-                    <div class="poster-info">
+                <div className="real-estate__related-info">
+                    <div className="poster-info">
                         <h3>Thông tin người đăng</h3>
-                        <div class="poster-info__text">
-                            <div class="poster-infot__text-left">
+                        <div className="poster-info__text">
+                            <div className="poster-infot__text-left">
                                 <p>Tên người đăng : <span>{tmpPoster.name}</span></p>
                                 <p>Phone Number : <span>{tmpPoster.phone}</span></p>
                                 <p>Email : <span>{tmpPoster.email}</span></p>
                             </div>
-                            <div class="poster-infot__text-right">
+                            <div className="poster-infot__text-right">
                                 <p>Ngày ngày đăng : <span>{realEstate.date}</span></p>
                                 <p>Ngày chỉnh sửa : <span>{jsonData.dataValue[0].lastEdit}</span></p>
                                 <p>Số người quan tâm: <span>{realEstate.total}</span></p>
@@ -57,7 +57,7 @@ const RealEstateDetail = ({ realEstate }) => {
                         </div>
 
                     </div>
-                    <div class="saler-info">
+                    <div className="saler-info">
                         <h3>Thông tin người bán</h3>
                         <Table
                             key={2}

@@ -20,6 +20,14 @@ export const Content = ({ contentId }) => {
     const [data, setData] = useState(jsonData.dataValue)
     const [dataUser, setDataUser] = useState(jsonData.dataValueUser);
 
+    const handleChangeKey = (key,tag)=>{
+        if(tag == 0){
+            setKey(key)
+            setDataUser([...jsonData.dataValueUser.slice(3,11)])
+        }
+           
+    }
+
     useEffect(() => {
         if (contentId === 1) setData(jsonData.dataValue.filter(item => key === 0 || item.status === key))
         if (contentId === 2) setDataUser(jsonData.dataValueUser.filter(item => key === 0 || item.status === key))
@@ -35,7 +43,7 @@ export const Content = ({ contentId }) => {
             case 1:
                 return (
                     <div>
-                        <Filter handleChangeKey={setKey} options={jsonData.optionValuesBDS} />
+                        <Filter handleChangeKey={handleChangeKey} options={jsonData.optionValuesBDS} value={key} />
                         <div className='list-real-estate'>
                             <Table
                                 key={1}
@@ -131,7 +139,7 @@ export const Content = ({ contentId }) => {
                 <div className='paper'>
                     {/* <div className='paper__header'>
                     <h3>Title</h3>
-                    <i class="fa fa-window-close" onClick={onCloseHandle}></i>
+                    <i className="fa fa-window-close" onClick={onCloseHandle}></i>
                 </div> */}
                     {getDetailContent()}
                 </div>

@@ -9,7 +9,7 @@ import './app.css';
 
 const accounts = [
     {username: 'admin', password: '123', role: 0},
-    {username: 'saler', password: '123', role: 1},
+    {username: 'seller', password: '123', role: 1},
     {username: 'poster', password: '123', role: 2}
 ];
 

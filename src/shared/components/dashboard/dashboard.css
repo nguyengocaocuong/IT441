@@ -31,3 +31,42 @@
     font-size: 20px;
     margin:5px;
 }
+.dashboard__content-list-card{
+    width: 100%;
+    
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard__content-list-card > .list-card-item{
+    width: 24%;
+    background-color: white;
+    height: 120px;
+    padding:10px;
+    box-sizing: border-box;
+    border-bottom: 3px solid var(--main-color);
+    display: flex;
+    justify-content: start;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.list-card-item:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.list-card-item i{
+    font-size: 50px;
+    margin-right: 20px;
+    line-height: 100px;
+}
+.list-card-item p:first-child{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 700;
+    padding:0;
+}
+.list-card-item p:last-child{
+    font-size: 18px;
+    font-weight: 900;
+    margin-top:-10px;
+}
+

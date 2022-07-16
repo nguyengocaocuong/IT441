@@ -12,7 +12,7 @@ const Table = props => {
     let range = []
 
     if(props.limit !== undefined){
-        let page = Math.floor(props.bodyData.length /Number(props.limit))
+        let page = Math.floor(props.bodyData.length / Number(props.limit))
         pages = props.bodyData.length % Number(props.limit) === 0 ? page : page+1
         range = [...Array(page).keys()]
     }
