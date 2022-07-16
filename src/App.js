@@ -5,7 +5,6 @@ import { Dashbroad as WritterDashbroad } from './pages/writter/dashbroad';
 import { Dashbroad as AdminDashbroad } from './pages/admin/dashbroad';
 import { Dashbroad as BrokerDashbroad } from './pages/broker/dashbroad';
 import Authen from './shared/components/authen/idex';
-import './app.css';
 
 const accounts = [
     {username: 'admin', password: '123', role: 0},
