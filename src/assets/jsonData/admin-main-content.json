@@ -298,7 +298,121 @@
         "idNV": "NV0013",
         "rule": 3,
         "lastLogin": "12/05/2022",
-        "status": 0
+        "status": 0,"dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Kpi",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
       },
       {
         "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
@@ -306,7 +420,121 @@
         "idNV": "NV0014",
         "rule": 3,
         "lastLogin": "21/05/2022",
-        "status": 0
+        "status": 0,"dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Kpi",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
       },
       {
         "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
@@ -314,7 +542,121 @@
         "idNV": "NV0015",
         "rule": 2,
         "lastLogin": "06/06/2022",
-        "status": 1
+        "status": 1,"dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Kpi",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
       },
       {
         "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
@@ -322,7 +664,121 @@
         "idNV": "NV0022",
         "rule": 3,
         "lastLogin": "06/06/2022",
-        "status": 1
+        "status": 1,"dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Kpi",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
       },
       {
         "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
@@ -330,7 +786,121 @@
         "idNV": "NV0042",
         "rule": 2,
         "lastLogin": "06/06/2022",
-        "status": 0
+        "status": 0,"dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Kpi",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
       },
       {
         "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
@@ -338,7 +908,121 @@
         "idNV": "NV0045",
         "rule": 2,
         "lastLogin": "06/06/2022",
-        "status": 1
+        "status": 1,"dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Kpi",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
       },
       {
         "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
@@ -346,7 +1030,121 @@
         "idNV": "NV0042",
         "rule": 3,
         "lastLogin": "06/06/2022",
-        "status": 1
+        "status": 1,"dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Kpi",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
       },
       {
         "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
@@ -354,7 +1152,121 @@
         "idNV": "NV0067",
         "rule": 2,
         "lastLogin": "06/06/2022",
-        "status": 0
+        "status": 0,"dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Kpi",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
       },
       {
         "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
@@ -362,7 +1274,121 @@
         "idNV": "NV0235",
         "rule": 2,
         "lastLogin": "06/06/2022",
-        "status": 0
+        "status": 0,"dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Kpi",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
       },
       {
         "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
@@ -370,7 +1396,121 @@
         "idNV": "NV1245",
         "rule": 3,
         "lastLogin": "06/06/2022",
-        "status": 1
+        "status": 1,"dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Kpi",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
       },
       {
         "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
@@ -378,7 +1518,121 @@
         "idNV": "NV5232",
         "rule": 3,
         "lastLogin": "06/06/2022",
-        "status": 1
+        "status": 1,"dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Kpi",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
       },
       {
         "avatar": "https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg",
@@ -386,7 +1640,121 @@
         "idNV": "NV2512",
         "rule": 2,
         "lastLogin": "06/06/2022",
-        "status": 0
+        "status": 0,"dob":"28/10/2000",
+        "phone":"0818988577",
+        "address":"Đăk Lăk",
+        "email":"nguyenngocaocuong@gmail.com",
+        "chartOptions":{
+          "optionsMixedChart": {
+            "chart": {
+              "id": "basic-bar",
+              "toolbar": {
+                "show": false
+              }
+            },
+            "plotOptions": {
+              "bar": {
+                "columnWidth": "50%"
+              }
+            },
+            "stroke": {
+              "width": [
+                4,
+                0,
+                0
+              ]
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ]
+            },
+            "markers": {
+              "size": 6,
+              "strokeWidth": 3,
+              "fillOpacity": 0,
+              "strokeOpacity": 0,
+              "hover": {
+                "size": 8
+              }
+            },
+            "yaxis": {
+              "tickAmount": 5,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "text": "Số bất động sản"
+              }
+            }
+          },
+          "seriesMixedChart": [
+            {
+              "name": "Kpi",
+              "type": "line",
+              "data": [
+                30,
+                40,
+                25,
+                50,
+                49,
+                21,
+                70,
+                51,
+                33,
+                51,
+                35,
+                23
+              ]
+            },
+            {
+              "name": "Đã bán",
+              "type": "column",
+              "data": [
+                23,
+                12,
+                54,
+                61,
+                32,
+                56,
+                81,
+                19,
+                52,
+                2,
+                45,
+                45
+              ]
+            },
+            {
+              "name": "Mới",
+              "type": "column",
+              "data": [
+                62,
+                12,
+                45,
+                55,
+                76,
+                41,
+                23,
+                43,
+                12,
+                77,
+                34,
+                12
+              ]
+            }
+          ]
+        }
       }
     ],
     "headerBDS": [

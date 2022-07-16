@@ -69,7 +69,7 @@
     margin: 0 !important;
 }
 
-.add-kpi {
+.add-kpi_ {
     height: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -79,7 +79,7 @@
     border-bottom: 1px solid rgb(27, 177, 228);
 }
 
-.add-kpi h3 {
+.add-kpi_ h3 {
     margin-top: 10px;
     width: 10%;
 }
@@ -87,17 +87,19 @@
 .add-kpi-content {
     display: flex;
 }
-
-.add-kpi .field-name {
+.add-kpi_ .form-input {
+    padding-top:7px;
+}
+.add-kpi_ .form-input .feild-name {
     display: inline-block;
     width: 80px;
 }
 
-.add-kpi .date {
+.add-kpi_ .date {
     margin-right: 20px;
 }
 
-.add-kpi .kpi-date {
+.add-kpi_ .kpi-date {
     width: 80px;
 }
 
@@ -106,12 +108,12 @@
     margin-bottom: 10px;
 }
 
-.add-kpi input[type='text'] {
+.add-kpi_ input[type='text'] {
     width: 80px;
     margin-right: 20px;
 }
 
-.add-kpi .kpi-unit {
+.add-kpi_ .kpi-unit {
     height: 30px;
     width: 50px;
 }
@@ -120,20 +122,21 @@
     display: flex;
 }
 
-.add-kpi-content>div select {
+.add-kpi_ .add-kpi-content>div select {
     padding: 5px 10px !important;
 }
 
-.add-kpi-content>div span {
+.add-kpi_ .add-kpi-content>div span {
     padding-right: 0px;
 }
 
-.add-kpi-content>div input {
+.add-kpi_ .add-kpi-content>div input {
     width: 40px;
     margin-right: 5px;
 }
 
-.add-kpi-content .submit-btn-kpi {
+.add-kpi_ .add-kpi-content .submit-btn-kpi {
+    margin-top:7px;
     margin-left: 20px;
     background-color: var(--main-color);
     color: white;
@@ -143,6 +146,6 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.add-kpi-content .submit-btn-kpi:hover {
+.add-kpi_ .add-kpi-content .submit-btn-kpi:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

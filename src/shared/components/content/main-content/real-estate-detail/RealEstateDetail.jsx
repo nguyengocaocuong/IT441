@@ -28,44 +28,51 @@ const renderBodyUser = (item, index) => {
 }
 const RealEstateDetail = ({ realEstate }) => {
     const tmpPoster = jsonData.dataValueUser[0]
-    const tmpSaler = [
-        jsonData.dataValueUser[1],
-        jsonData.dataValueUser[2],
-        jsonData.dataValueUser[5],
-        jsonData.dataValueUser[7],
-        jsonData.dataValueUser[8],
-        jsonData.dataValueUser[9],
-    ]
+    const tmpSeller = jsonData.dataValueUser[1]
+    // const tmpSaler = [
+    //     jsonData.dataValueUser[1],
+    //     jsonData.dataValueUser[2],
+    //     jsonData.dataValueUser[5],
+    //     jsonData.dataValueUser[7],
+    //     jsonData.dataValueUser[8],
+    //     jsonData.dataValueUser[9],
+    // ]
     return (
         <div>
             <div className="real-estate__info">
                 <h1>#RE0001</h1>
                 <div className="real-estate__related-info">
-                    <div className="poster-info">
+                    <div className="poster-info bg">
                         <h3>Thông tin người đăng</h3>
                         <div className="poster-info__text">
                             <div className="poster-infot__text-left">
-                                <p>Tên người đăng : <span>{tmpPoster.name}</span></p>
-                                <p>Phone Number : <span>{tmpPoster.phone}</span></p>
-                                <p>Email : <span>{tmpPoster.email}</span></p>
+                                <p>Người Đăng : <span>{tmpPoster.name}</span></p>
+                                <p>Số điện thoại : <span>{tmpPoster.phone}</span></p>
+                                <p>Địa chỉ Email : <span>{tmpPoster.email}</span></p>
                             </div>
                             <div className="poster-infot__text-right">
                                 <p>Ngày ngày đăng : <span>{realEstate.date}</span></p>
                                 <p>Ngày chỉnh sửa : <span>{jsonData.dataValue[0].lastEdit}</span></p>
-                                <p>Số người quan tâm: <span>{realEstate.total}</span></p>
                             </div>
                         </div>
 
                     </div>
-                    <div className="saler-info">
+                    <div className="saler-info bg">
                         <h3>Thông tin người bán</h3>
-                        <Table
-                            key={2}
-                            limit={3}
-                            headeData={head}
-                            renderHead={(item, index) => renderHead(item, index)}
-                            bodyData={tmpSaler}
-                            renderBody={(item, index) => renderBodyUser(item, index)} />
+                        <div className="poster-info__text">
+                            <div className="poster-infot__text-left">
+                                <p>Người bán : <span>{tmpSeller.name}</span></p>
+                                <p>Số điện thoại : <span>{tmpSeller.phone}</span></p>
+                                <p>Địa chỉ Email : <span>{tmpSeller.email}</span></p>
+                            </div>
+                            <div className="poster-infot__text-right">
+                                <p>Ngày nhận bán : <span>{realEstate.date}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='estate-info bg'>
+                        <h3>Trạng thái bất động sản</h3>
+
                     </div>
                 </div>
             </div>

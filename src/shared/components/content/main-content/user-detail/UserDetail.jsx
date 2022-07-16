@@ -74,7 +74,7 @@ const UserDetail = ({ user }) => {
                     </div>
                 </div>
             </div>
-            <div className='add-kpi'>
+            <div className='add-kpi_'>
                 <h3>Add KPI</h3>
                 <div className='add-kpi-content'>
                     <div>
@@ -91,7 +91,7 @@ const UserDetail = ({ user }) => {
                             }
                         </select>
                     </div>
-                    <div>
+                    <div className='form-input'>
                         <span className='field-name'>KPI: </span>
                         <input type='number' onChange={e => setNewData({ ...newData, data: e.target.value })} />
                         <span>{user.rule === 1 ? 'Bài' : 'Căn'}</span>
