@@ -23,12 +23,17 @@ const PostingPage = () => {
                     <div className='add__category__input'>
                         <input type='text' />
                     </div>
+                    <select>
+                        <option value={0}>Tỷ</option>
+                        <option value={1}>Triệu</option>
+                    </select>
                 </div>
                 <div className='add__category__inRow'>
                     <span className='add__category__title'>Diện tích</span>
                     <div className='add__category__input'>
                         <input type='text' />
                     </div>
+                    <span>m2</span>
                 </div>
             </div>
             <div className='add__category'>

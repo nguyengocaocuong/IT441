@@ -6,7 +6,7 @@ import './content.css';
 import Statistic from "./content-item/stastistic";
 import CheckInOut from "./content-item/check-in-out";
 
-const columns = ['Mã bài đăng', 'Quan tâm', 'Ngày đăng', 'Trạng thái', ''];
+const columns = ['Mã bài đăng', 'Quan tâm', 'Ngày đăng', 'Trạng thái'];
 const data = [
     {
         id: 1000002,

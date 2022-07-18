@@ -1,0 +1,49 @@
+.item-detail {
+    padding: 0px 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: auto;
+    max-height: 500px;
+}
+
+.item-detail__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-detail__field {
+    width: 150px;
+}
+
+.item-detail__value-field {
+    width: 500px;
+}
+
+.item-detail__value-field > p,
+.item-detail__value-field > input {
+    width: 100%;
+}
+
+.same-row {
+    margin-right: 10px;
+}
+
+.edit-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.edit-button {
+    background-color: #ff5151;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.edit-button:hover {
+    background-color: #c02d2d;
+}

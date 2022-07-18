@@ -20,10 +20,6 @@ input {
     margin: 10px 0px;
 }
 
-.add__category__inRow {
-    display: flex;
-    width: 45%;
-}
 .add__category__inRow .add__category__input {
     width: auto;
 }
@@ -31,10 +27,6 @@ input {
 .add__category__title {
     display: block;
     width: 150px;
-}
-
-.add__category__input {
-    width: 500px;
 }
 
 .add__category__input > input {

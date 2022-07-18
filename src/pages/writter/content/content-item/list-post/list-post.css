@@ -1,3 +1,15 @@
+.list-container {
+    /* overflow: hidden; */
+}
+
+.list {
+    display: flex;
+}
+
+.detail {
+    width: 50%;
+}
+
 .sold {
     color: #ff0000;
 }

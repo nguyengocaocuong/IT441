@@ -5,7 +5,6 @@ import './care.css';
 const Care = ({careList = []}) => {
     return (
         <div className='care-modal'>
-            <h3>Danh sách quan tâm</h3>
             {
                 careList.map((item, index) => (
                     <div key={index} className='caring-profile'>
