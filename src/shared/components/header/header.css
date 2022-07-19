@@ -145,3 +145,23 @@
 .category {
     margin: 10px 0px;
 }
+.notification__option.bg-success{
+    background-color: #d6e3d1;
+}
+.notification__option.bg-warnning{
+    background-color: #e0c2cd;
+}
+.notification__option .weight-text-red{
+    color: red;
+    font-weight: 700;
+    font-size: 130%;
+}
+.notification__option .weight-text-green{
+    color: green;
+    font-size: 130%;
+    font-weight: 700;
+}
+.text-red{
+    color: red;
+    font-weight: 700;
+}
