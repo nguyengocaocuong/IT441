@@ -2,8 +2,10 @@
     padding: 0px 20px;
     box-sizing: border-box;
     position: relative;
-    overflow: auto;
+    overflow-y: auto;
     max-height: 500px;
+    overflow-x: hidden;
+
 }
 
 .item-detail__row {
@@ -18,11 +20,19 @@
 
 .item-detail__value-field {
     width: 500px;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .item-detail__value-field > p,
 .item-detail__value-field > input {
     width: 100%;
+
+}
+.qt h2{
+    font-weight: 900;
+    color:gray;
+
 }
 
 .same-row {
@@ -34,6 +44,7 @@
     justify-content: space-between;
     margin-bottom: 5px;
     width: 100%;
+    margin-bottom: 15px;
 }
 
 .edit-button {
@@ -46,4 +57,14 @@
 
 .edit-button:hover {
     background-color: #c02d2d;
+}
+.save-notify{
+    margin:10px 0;
+}
+.item-detail__field{
+    font-weight: 700;
+    
+}
+.ml{
+    margin-left: 70px;
 }

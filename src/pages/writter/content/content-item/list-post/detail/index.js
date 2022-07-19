@@ -8,7 +8,7 @@ const Detail = ({data, onExit}) => {
     const [name2, setName2] = useState('Nhà đẹp');
     const [address, setAddress] = useState('1 Trần Đại Nghĩa');
     const [address2, setAddress2] = useState('1 Trần Đại Nghĩa');
-    const [price, setPrice] = useState(1.5);
+    const [price, setPrice] = useState(15000000);
     const [price2, setPrice2] = useState(1.5);
     const [area, setArea] = useState(30);
     const [area2, setArea2] = useState(30);
@@ -82,7 +82,7 @@ const Detail = ({data, onExit}) => {
             </div>
             {
                 confirmBox && (
-                    <div>
+                    <div className='save-notify'>
                         <span>Chưa lưu các thay đổi</span>
                         <button onClick={() => {
                             setOnEditing(false);
@@ -140,7 +140,7 @@ const Detail = ({data, onExit}) => {
                     </div>
                 </div>
                 <div className='item-detail__row same-row'>
-                    <span className='item-detail__field'>Diện tích</span>
+                    <span className='item-detail__field ml'>Diện tích</span>
                     <div className=''>
                         {
                             onEditing ? (
@@ -228,8 +228,8 @@ const Detail = ({data, onExit}) => {
                         <button className='item-detail__save-button' onClick={onSaveHandle} >Lưu</button>
                     </div>
                 ) : (
-                    <div>
-                        <h3>Quan tâm</h3>
+                    <div className='qt'>
+                        <h2>Quan tâm</h2>
                         <Care />
                     </div>
                 )

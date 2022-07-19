@@ -12,8 +12,8 @@ const accounts = [
 ];
 
 function App() {
-    const [signInData, setSignInData] = useState(null);
-    const [authen, setAuthen] = useState(false);
+    const [signInData, setSignInData] = useState(accounts[1]);
+    const [authen, setAuthen] = useState(true);
 
     const authenHandle = (data) => {
         const result = accounts.findIndex(account => account.username === data.username && account.password === data.password);

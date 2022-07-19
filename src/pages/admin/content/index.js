@@ -43,7 +43,7 @@ export const Content = ({ contentId }) => {
             case 1:
                 return (
                     <div>
-                        <Filter handleChangeKey={handleChangeKey} options={jsonData.optionValuesBDS} value={key} />
+                        <Filter handleChangeKey={handleChangeKey} options={null} value={key} />
                         <div className='list-real-estate'>
                             <Table
                                 key={1}
@@ -60,7 +60,7 @@ export const Content = ({ contentId }) => {
             case 2:
                 return (
                     <div>
-                        <Filter options={jsonData.optionValuesUser} handleChangeKey={setKey} />
+                        <Filter options={null} handleChangeKey={setKey} />
                         <div className='list-real-estate'>
                             <Table
                                 key={2}
@@ -122,7 +122,6 @@ export const Content = ({ contentId }) => {
                 <td><i className="fa fa-user-circle sample"></i></td>
                 <td>{item.name}</td>
                 <td>{item.idNV}</td>
-                <td>{item === 2 ? 'Người bán' : 'Người đăng'}</td>
                 <td>{item.lastLogin}</td>
                 <td><Badge content={item.status === 1 ? "Online" : "Ofline"} type={item.status === 1 ? "success" : "danger"} /></td>
             </tr>
