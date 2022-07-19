@@ -78,7 +78,10 @@ const Dashboard = () => {
             yaxis: {
                 tickAmount: 5,
                 min: 0,
-                max: 100
+                max: 100,
+                title : {
+                    text: "Số bất động sản"
+                }
             }
         },
         seriesMixedChart: [
@@ -108,7 +111,7 @@ const Dashboard = () => {
             setTopKpi(data1.slice(5))
             return
         }
-        setTopKpi(data1.slice(0,2))
+        setTopKpi(data1.slice(0, 2))
     }, [role])
     const handleChange = (e) => {
         const max = 90;
@@ -175,12 +178,14 @@ const Dashboard = () => {
                 </div>
                 <div className='chart__main'>
                     <Chart
+                        key={2}
                         options={chartOptions.optionsMixedChart}
                         series={chartOptions.seriesMixedChart}
                         type="line"
                         width="100%"
                         height="300px"
                     />
+
                 </div>
             </div>
             <div className='dashboard__list'>

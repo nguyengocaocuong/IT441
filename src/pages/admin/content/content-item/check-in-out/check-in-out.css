@@ -1,3 +1,213 @@
-tbody > tr:hover {
+.check__in__out-container {
+    margin: -30px;
+    padding: 30px;
+}
+
+tbody>tr:hover {
     background-color: transparent;
+}
+
+.check__in__out {
+    padding: 10px;
+}
+
+.check__form__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a3a3a3;
+    box-sizing: border-box;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+}
+
+.check__form__column.employee__info {
+    width: 35%;
+}
+
+.check__form.check__form__column.mid__column {
+    width: 35%;
+}
+
+.check__form__column.avatar__container {
+    width: 30%;
+}
+
+.checkinout__avatar {
+    width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avatar__container {
+    text-align: right;
+}
+
+.check__form__category>span {
+    display: inline-block;
+    width: 150px;
+    font-size: 17px;
+    color: #282525;
+    margin: 5px;
+}
+
+.check__form__category select {
+    width: 150px !important;
+    padding: 5px;
+    font-size: 15px;
+    color: #a3a3a3;
+}
+
+.check__form__category {
+    margin: 10px 0px;
+}
+
+.check__form__category>input[type='date'] {
+    width: 136px !important;
+    padding: 5px;
+    font-size: 15px;
+    color: #a3a3a3;
+}
+
+.select__box {
+    padding: 5px;
+}
+
+.day {
+    border: 1px solid #a3a3a3;
+    width: 120px;
+}
+
+.day.no-active {
+    background-color: #a3a3a3;
+    cursor: e-resize;
+}
+
+.work__item {
+    background-color: #ff5858;
+    border-top: 1px solid #a3a3a3;
+}
+
+.worked {
+    background-color: #58ff82;
+}
+
+.check__button {
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: #006a9b;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 50px;
+    cursor: pointer;
+    margin-left: calc(80% - 100px);
+}
+
+.employee__info span {
+    display: inline-block;
+    width: 150px;
+}
+
+.mid__column {
+    padding: 0px 10px;
+    border-left: 1px solid #a3a3a3;
+    border-right: 1px solid #a3a3a3;
+}
+
+.check__form__column.employee__info>div span {
+    font-size: 17px;
+    color: #282525;
+}
+
+.check__form__column.employee__info>div {
+    font-size: 15px;
+    color: #a3a3a3;
+    margin: 5px;
+}
+
+.work__info {
+    margin-top:20px;
+    padding:10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+}
+
+.work__info span,
+select {
+    margin: 10px 0;
+}
+
+.work__info span {
+    font-size: 20px;
+}
+
+.work__info select {
+    padding: 5px 7px;
+    font-size: 17px;
+    color: rgb(0, 155, 251);
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.work__info select:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.work__info .MuiTableCell-head {
+    background-color: #ff5858;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.work__info .MuiTableCell-body {
+    padding: 5px;
+}
+
+.work__info tr.MuiTableRow-root {
+    background-color: transparent !important;
+}
+
+.day:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.work__info-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 10px 0;
+}
+
+.work__info-top-status {
+    font-size: 15px;
+}
+
+.work__info-top-status span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #ff5858;
+}
+
+.work__info-top-status span.worked {
+    background-color: #58ff82;
+}
+
+.work__info-top-status p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-right: 20px;
+}
+.day .d-none{
+    display: none;
+}
+.day.b-none{
+    border:none;
 }
