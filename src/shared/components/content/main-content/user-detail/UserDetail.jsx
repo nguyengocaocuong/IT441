@@ -4,19 +4,11 @@ import Chart from "react-apexcharts";
 import './user-detail.css'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Button } from '@material-ui/core';
 
 const UserDetail = ({ user }) => {
     const max = 90;
     const min = 30;
-    // let newMixedSeries = []
-    // jsonData.dataValueUser[0].chartOptions.seriesMixedChart.forEach((s) => {
-    //     const data = s.data.map(() => {
-    //         return Math.floor(Math.random() * (max - min + 1)) + min;
-    //     });
-    //     newMixedSeries.push({ data: data, type: s.type });
-    // })
-    // jsonData.dataValueUser[0].chartOptions.seriesMixedChart = newMixedSeries
-
     const [mixedSeries, setMixedSeries] = useState([]);
     const [newData, setNewData] = useState({ month: 1, data: undefined });
 
@@ -32,20 +24,6 @@ const UserDetail = ({ user }) => {
         setMixedSeries(newMixedSeries);
     }, []);
 
-    const editKpiHandle = () => {
-        const temp_MixedSeries = mixedSeries;
-        const newDatas = temp_MixedSeries[2].data.map((month, index) => {
-            if (index === newData.month - 1) {
-                return Number(newData.data);
-            } else {
-                return month;
-            }
-        });
-
-        temp_MixedSeries[2].data = newDatas;
-
-        setMixedSeries([...temp_MixedSeries]);
-    }
 
     return (
         <div>
@@ -92,12 +70,12 @@ const UserDetail = ({ user }) => {
                         </select>
                     </div>
                     <div className='form-input'>
-                        <span className='field-name'>KPI: </span>
-                        <input type='number' onChange={e => setNewData({ ...newData, data: e.target.value })} />
+                        <p className='field-name'>KPI: </p>
+                        <input type='number' onChange={e => setNewData({ ...newData, data: e.target.value })} min='1' max='100' />
                         <span>{user.rule === 1 ? 'Bài' : 'Căn'}</span>
                     </div>
                     <div>
-                        <input className='submit-btn-kpi' type='submit' value='Lưu' onClick={editKpiHandle} />
+                        <Button className='submit-btn-kpi' variant="contained" color="primary">Lưu lại</Button>
                     </div>
                 </div>
             </div>

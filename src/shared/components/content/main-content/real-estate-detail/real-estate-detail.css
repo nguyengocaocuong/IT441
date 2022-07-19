@@ -14,7 +14,7 @@
     color: rgb(43, 68, 44);
 }
 
-.real-estate__related-info .poster-info__text {
+.poster-info__text {
     display: flex;
     justify-content: space-around;
 }

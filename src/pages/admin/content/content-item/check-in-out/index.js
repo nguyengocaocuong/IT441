@@ -44,6 +44,11 @@ const timeTable = [
     { id: 28, morning: false, afternoon: false, kpi: 5 },
     { id: 29, morning: true, afternoon: false, kpi: 5 },
     { id: 30, morning: true, afternoon: true, kpi: 5 },
+    { id: 31, morning: true, afternoon: true, kpi: -1 },
+    { id: 32, morning: true, afternoon: true, kpi: -1 },
+    { id: 33, morning: true, afternoon: true, kpi: -1 },
+    { id: 34, morning: true, afternoon: true, kpi: -1 },
+    { id: 35, morning: true, afternoon: true, kpi: -1 },
 ];
 
 const CheckInOut = ({ user = { id: 1, name: 'Nguyễn Văn A', dob: '1/1/1990', department: 'AB01', role: 0 } }) => {
@@ -129,10 +134,10 @@ const CheckInOut = ({ user = { id: 1, name: 'Nguyễn Văn A', dob: '1/1/1990', 
                                             {
                                                 week.map(day => (
                                                     <TableCell key={day.id} align='center'>
-                                                        <div className='day'>
-                                                            <span>{day.id}</span>
-                                                            <div className={`work__item ${day.morning && 'worked'}`} >In</div>
-                                                            <div className={`work__item ${day.afternoon && 'worked'}`} >Out</div>
+                                                        <div className={`day ${day.kpi === -1 ? 'b-none': ''}`}>
+                                                            <span className={day.kpi === -1 ? 'd-none': ''}>{day.id}</span>
+                                                            <div className={`work__item ${day.morning && 'worked'} ${day.kpi === -1 ? 'd-none': ''}`} >In</div>
+                                                            <div className={`work__item ${day.afternoon && 'worked'} ${day.kpi === -1 ? 'd-none': ''}`} >Out</div>
                                                         </div>
                                                     </TableCell>
                                                 ))

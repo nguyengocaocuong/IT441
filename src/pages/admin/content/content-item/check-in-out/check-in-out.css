@@ -205,3 +205,9 @@ select {
     display: inline-block;
     margin-right: 20px;
 }
+.day .d-none{
+    display: none;
+}
+.day.b-none{
+    border:none;
+}

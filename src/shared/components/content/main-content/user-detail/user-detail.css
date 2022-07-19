@@ -70,26 +70,39 @@
 }
 
 .add-kpi_ {
-    height: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 7px 0;
+    margin:20px 0;
+    padding:10px 0;
+    height: 50px;
     display: flex;
     border-top: 1px solid rgb(27, 177, 228);
     border-bottom: 1px solid rgb(27, 177, 228);
 }
 
+.add-kpi_ * {
+    margin: 0;
+    padding: 0;
+}
+
 .add-kpi_ h3 {
-    margin-top: 10px;
     width: 10%;
+    padding: 0;
+    margin: 0;
+    line-height: 50px;
 }
 
 .add-kpi-content {
     display: flex;
 }
-.add-kpi_ .form-input {
-    padding-top:7px;
+
+.add-kpi-content>div {
+    line-height: 50px;
 }
+
+.add-kpi_ .form-input p.field-name {
+    line-height: 50px;
+    display: inline-block;
+}
+
 .add-kpi_ .form-input .feild-name {
     display: inline-block;
     width: 80px;
@@ -124,6 +137,9 @@
 
 .add-kpi_ .add-kpi-content>div select {
     padding: 5px 10px !important;
+    padding: 5px 10px !important;
+    margin-right: 110px;
+    width: 100px;
 }
 
 .add-kpi_ .add-kpi-content>div span {
@@ -131,12 +147,12 @@
 }
 
 .add-kpi_ .add-kpi-content>div input {
-    width: 40px;
+    width: 50px;
     margin-right: 5px;
 }
 
 .add-kpi_ .add-kpi-content .submit-btn-kpi {
-    margin-top:7px;
+    margin-top: 7px;
     margin-left: 20px;
     background-color: var(--main-color);
     color: white;
@@ -146,6 +162,12 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.add-kpi_ .add-kpi-content .submit-btn-kpi:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+.add-kpi_ .add-kpi-content .submit-btn-kpi {
+    margin-top: 0px;
+}
+
+.form-input input {
+    padding: 5px 10px;
+    width: 150px;
 }
