@@ -21,3 +21,43 @@
     height: 50px;
     margin-right: 10px;
 }
+.button-add-care-person{
+    display: flex;
+    justify-content: end;
+}
+.button-add-care-person button{
+    padding:10px 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(92, 175, 92);
+    border:none;
+    border-radius: 10px;
+    color: wheat;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.button-add-care-person button:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* .paper{
+    background-color: white;
+    margin: 200px 450px!important;
+    padding: 10px 45px;
+    height: calc(100% - 400px)!important;
+} */
+.care-info{
+    padding:0 30px;
+}
+/* .care-info .input-group span{
+    display: inline-block;
+    width: 150px;
+}
+.care-info .input-group input{
+    display: inline-block;
+    width: 250px;
+}
+.paper .flex-button{
+    display: flex;
+    justify-content: end;
+} */
