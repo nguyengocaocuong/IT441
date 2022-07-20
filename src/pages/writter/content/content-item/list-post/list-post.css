@@ -1,3 +1,15 @@
+.list-container {
+    height: 500px;
+}
+
+.list {
+    display: flex;
+}
+
+.detail {
+    width: 50%;
+}
+
 .sold {
     color: #ff0000;
 }
@@ -18,4 +30,28 @@
 
 .caring__cell {
     cursor: pointer;
+}
+.MuiTableRow-root.MuiTableRow-head{
+    background-color: #ff6600;
+}
+.MuiTableCell-root.MuiTableCell-head.MuiTableCell-alignCenter.MuiTableCell-stickyHeader{
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 700;
+    color:white;
+}
+.MuiTableBody-root .MuiTableRow-root:hover{
+    background-color: aquamarine;
+    color: white;
+}
+.detail{
+    overflow-x: hidden;
+    margin:0px 10px;
+    padding:10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+}
+.item-detail{
+    overflow-x: hidden;
+
 }

@@ -54,7 +54,27 @@ const Statistic = () => {
     return (
         <div className='statistic'>
             <div>
-                <h2>Thống kê bài đăng theo năm</h2>
+                <h2>Thống kê bài đăng</h2>
+                <span>Năm </span>
+                <select>
+                    {
+                        [1, 2, 3, 4, 5].map(year => (
+                            <option key={year}>{2022 - year}</option>
+                        ))
+                    }
+                </select>
+            </div>
+            <div className='chart__main'>
+                <Chart
+                    options={chartOptions.optionsMixedChart}
+                    series={chartOptions.seriesMixedChart}
+                    type="line"
+                    width="100%"
+                    height="300px"
+                />
+            </div>
+            <div>
+                <h2>Thống kê bất động sản đã bán</h2>
                 <span>Năm </span>
                 <select>
                     {

@@ -8,13 +8,12 @@ import Authen from './shared/components/authen/idex';
 
 const accounts = [
     {username: 'admin', password: '123', role: 0},
-    {username: 'seller', password: '123', role: 1},
-    {username: 'poster', password: '123', role: 2}
+    {username: 'employee', password: '123', role: 1}
 ];
 
 function App() {
-    const [signInData, setSignInData] = useState(accounts[0]);
-    const [authen, setAuthen] = useState(false);
+    const [signInData, setSignInData] = useState(accounts[1]);
+    const [authen, setAuthen] = useState(true);
 
     const authenHandle = (data) => {
         const result = accounts.findIndex(account => account.username === data.username && account.password === data.password);

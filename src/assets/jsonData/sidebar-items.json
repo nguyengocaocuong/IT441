@@ -29,11 +29,16 @@
         },
         {
             "id": 1,
+            "title": "Thêm bất động sản",
+            "icon": "fa fa-plus"
+        },
+        {
+            "id": 2,
             "title": "Thống kê",
             "icon": "fa fa-pie-chart"
         },
         {
-            "id": 2,
+            "id": 3,
             "title": "Chấm công",
             "icon": "fa fa-table"
         }

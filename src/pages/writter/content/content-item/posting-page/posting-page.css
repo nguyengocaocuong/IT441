@@ -10,8 +10,15 @@ input {
 
 .add__category__inRow {
     display: flex;
-    width: 45%;
+    width: 400px;
+    margin-right: 95px;
+    align-items: center;
 }
+
+.add__category__inRow > select {
+    height: 100%;
+}
+
 .add__category__inRow .add__category__input {
     width: auto;
 }
@@ -22,9 +29,11 @@ input {
 }
 
 .add__category__input {
-    width: 500px;
+    width: 700px;
+    margin-right: 20px;
 }
 
+.add__category__input > textarea,
 .add__category__input > input {
     width: 100%;
 }
