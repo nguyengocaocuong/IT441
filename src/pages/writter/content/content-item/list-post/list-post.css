@@ -53,5 +53,32 @@
 }
 .item-detail{
     overflow-x: hidden;
+}
 
+.self {
+    background-color: #00a909;
+    padding: 5px;
+    width: 100px;
+    display: inline-flex;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.take {
+    background-color: #ffef12;
+    width: 100px;
+    padding: 5px;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.other {
+    background-color: #c46262;
+    padding: 5px;
+    width: 100px;
+    display: inline-flex;
+    color: #ffffff;
+    border-radius: 5px;
 }

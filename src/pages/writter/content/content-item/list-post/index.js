@@ -35,15 +35,28 @@ const ListPost = ({columns, data}) => {
         setEditId(id);
     }
 
+    const getAssignee = (assignee) => {
+        switch (assignee)
+        {
+            case 'Bạn phụ trách':
+                return (<span className='self'>{assignee}</span>);
+
+            case '':
+                return (<span><button className='take'>Nhận bán</button></span>);
+
+            default: return (<span className='other'>{assignee}</span>)
+        }
+    }
+
     return (
         <div className='list-container'>
             <div  className='list'>
                 <TableContainer style={{maxHeight: 500, width: editId ? '50%' : '100%'}}>
-                    <Table stickyHeader >
+                    <Table>
                         <TableHead>
                             <TableRow>
                                 {
-                                    columns.map((column, index) => <TableCell align="center" key={index}>{column}</TableCell>)
+                                    columns.map((column, index) => <TableCell style={{color: '#fff', fontSize: 'medium'}} align="center" key={index}>{column}</TableCell>)
                                 }
                             </TableRow>
                         </TableHead>
@@ -55,6 +68,7 @@ const ListPost = ({columns, data}) => {
                                         <TableCell align="center" className='caring__cell'>{item.care}</TableCell>
                                         <TableCell align="center">{item.created_in}</TableCell>
                                         <TableCell align="center"><i className={`fa fa-circle ${item.status === 0 ? 'sold' : item.status === 1 ? 'waiting' : 'available'}`} /></TableCell>
+                                        <TableCell align='center'>{getAssignee(item.assignee)}</TableCell>
                                     </TableRow>
                                 ))
                             }
